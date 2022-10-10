@@ -55,7 +55,7 @@ nav {
 }
 
 .footer {
-  padding: 24px;
+  padding: 21px;
   text-align: center;
   font-size: 13pt;
   color: var(--inactive);
@@ -67,7 +67,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   background-color: #E3E3E3;
-  height: 61.8vh;
+  height: 610px;
   padding: 21px;
 }
 
@@ -101,4 +101,31 @@ nav {
   transition-property: color;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
+}
+
+.home-container {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 516px) {
+  .footer {
+    padding: 13px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .header-content {
+    height: 610px;
+  }
+  
+  .filters {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .header-content {
+    height: 466px;
+  }
 }

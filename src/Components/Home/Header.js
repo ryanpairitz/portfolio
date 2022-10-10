@@ -1,25 +1,9 @@
-import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import LogoAnimation from "./LogoAnimation";
 
-const Header = () => {
+const Header = ({ filters, onClickHandler }) => {
     const activeLinkClass = "nav-link active-link";
     const inactiveLinkClass = "nav-link";
-
-    const [filterByUI, setFilterByUI] = useState(false);
-    const [filterByDev, setFilterByDev] = useState(false);
-    const [filterByDesign, setFilterByDesign] = useState(false);
-    const [filterByAnim, setFilterByAnim] = useState(false);
-
-    useEffect(() => {
-        console.log('inside useEffect: check filters');
-        if (filterByUI && filterByDev && filterByDesign && filterByAnim){
-            setFilterByUI(false);
-            setFilterByDev(false);
-            setFilterByDesign(false);
-            setFilterByAnim(false);
-        }
-    }, [filterByUI, filterByDev]);
 
     return (
         <div className="header">
@@ -31,24 +15,37 @@ const Header = () => {
                 <h2 className="subtitle">/ pairi - its &#129436; /</h2>
                 <h3 className="filters">
                     <span
-                        onClick={() => setFilterByUI(!filterByUI)}
-                        className={filterByUI ? "filter-active filter" : "filter"}>
+                        id="uiDesign"
+                        onClick={onClickHandler}
+                        className={
+                            filters["uiDesign"] ? "filter-active filter" : "filter"
+                        }>
                         ui/ux design
                     </span> | <span
-                        onClick={() => setFilterByDev(!filterByDev)}
-                        className={filterByDev ? "filter-active filter" : "filter"}>
+                        id="frontendDev"
+                        onClick={onClickHandler}
+                        className={
+                            filters["frontendDev"] ? "filter-active filter" : "filter"
+                        }>
                         frontend dev
                     </span> | <span
-                        onClick={() => setFilterByDesign(!filterByDesign)}
-                        className={filterByDesign ? "filter-active filter" : "filter"}>
+                        id="graphicDesign"
+                        onClick={onClickHandler}
+                        className={
+                            filters["graphicDesign"] ? "filter-active filter" : "filter"
+                        }>
                         graphic design
                     </span> | <span
-                        onClick={() => setFilterByAnim(!filterByAnim)}
-                        className={filterByAnim ? "filter-active filter" : "filter"}>
+                        id="animation"
+                        onClick={onClickHandler}
+                        className={
+                            filters["animation"] ? "filter-active filter" : "filter"
+                        }>
                         animation
                     </span>
                 </h3>
             </div>
+            
             <nav>
                 <NavLink
                     to="/"
@@ -56,14 +53,21 @@ const Header = () => {
                         isActive ? activeLinkClass : inactiveLinkClass
                     }
                     end>
-                    Projects
+                    projects
                 </NavLink>
                 <NavLink
-                    to="/about"
+                    to="personal"
                     className={({ isActive }) =>
                         isActive ? activeLinkClass : inactiveLinkClass
                     }>
-                    About
+                    personal
+                </NavLink>
+                <NavLink
+                    to="about"
+                    className={({ isActive }) =>
+                        isActive ? activeLinkClass : inactiveLinkClass
+                    }>
+                    about
                 </NavLink>
             </nav>
         </div>

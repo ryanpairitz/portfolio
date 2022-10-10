@@ -1,7 +1,6 @@
 import {
     Route,
-    Routes,
-    useLocation
+    Routes
 } from "react-router-dom";
 import Footer from "./Footer";
 import About from "./Home/About";
@@ -16,6 +15,7 @@ const Components = () => {
                 <Route path="/" element={<Home />}>
                     <Route index element={<Projects />}/>
                     <Route path="projects" element={<Projects />}/>
+                    <Route path="personal" element={<Projects />}/>
                     <Route path="about" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>
                 </Route>
