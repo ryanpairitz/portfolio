@@ -1,38 +1,104 @@
+:root {
+  --active: #585858;
+  --inactive: #B1B1B1;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
+  font-family: 'Futura';
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3 {
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-link {
+  text-decoration: none;
+  font-size: 21px;
+  color: var(--inactive);
+  padding: 13px;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: var(--active);
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.active-link {
+  color: var(--active);
+}
+
+.title {
+  font-size: 55px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 34px;
+  margin: 0;
+}
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 13pt;
+  color: var(--inactive);
+  background-color: #4A4A4A;
+}
+
+.header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #E3E3E3;
+  height: 61.8vh;
+  padding: 21px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-logo {
+  flex-shrink: 0;
+  width: 254.97px;
+  /* border-style: solid;
+  border-width: 1px;
+  border-color: black; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+}
+
+.filters {
+  font-size: 21px;
+  color: var(--inactive);
+  margin: 13px 0 13px 0;
+}
+
+.filter-active {
+  color: var(--active);
+}
+
+.filter:hover{
+  cursor: pointer;
+  color: var(--active);
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
