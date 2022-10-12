@@ -1,0 +1,43 @@
+.line {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.button {
+    background-color: black;
+    padding: 0px 10.5px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    border-radius: 55px;
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.button:hover {
+    background-color: #585858;
+    transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.button-text {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+    padding: 0px;
+    padding-right: 5px;
+}
+
+.email-icon {
+    fill: white;
+    width: 13px;
+}
+
+@media screen and (min-height: 1080px) {
+    .button-text {
+        font-size: 15px;
+    }
+}

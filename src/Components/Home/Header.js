@@ -12,7 +12,7 @@ const Header = ({ filters, onClickHandler }) => {
                     <LogoAnimation />
                 </div>
                 <h1 className="title">ryan pairitz</h1>
-                <h2 className="subtitle">/ pairi - its &#129436; /</h2>
+                <h2 className="subtitle">/ pair - its &#129436; /</h2>
                 <h3 className="filters">
                     <span
                         id="uiDesign"
@@ -45,7 +45,7 @@ const Header = ({ filters, onClickHandler }) => {
                     </span>
                 </h3>
             </div>
-            
+
             <nav>
                 <NavLink
                     to="/"
