@@ -101,6 +101,8 @@ nav {
   justify-content: center;
   background-color: #E3E3E3;
   height: 610px;
+  border-bottom-left-radius: 22.5px;
+  border-bottom-right-radius: 22.5px;
 }
 
 .header-logo {
@@ -145,6 +147,10 @@ nav {
 @media screen and (max-width: 590px) {
   .filters {
     font-size: 13px;
+  }
+  .header-content {
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
   }
 }
 
