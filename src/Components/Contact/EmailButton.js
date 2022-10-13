@@ -1,14 +1,41 @@
 import { useState } from 'react';
 import { ReactComponent as EmailIcon } from '../img/icons_email.svg';
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, useTransition } from "react-spring";
 import useMeasure from "react-use-measure";
 import './Contact.css';
+
+const addressChars = [
+    {key: 1, value: 'r'},
+    {key: 2, value: 'y'},
+    {key: 3, value: 'n'},
+    {key: 4, value: '.'},
+    {key: 5, value: 'p'},
+    {key: 6, value: 'a'},
+    {key: 7, value: 'i'},
+    {key: 8, value: 'r'},
+    {key: 9, value: '@'},
+    {key: 10, value: 'm'},
+    {key: 11, value: 'e'},
+    {key: 12, value: '.'},
+    {key: 13, value: 'c'},
+    {key: 14, value: 'o'},
+    {key: 15, value: 'm'}
+]
 
 const EmailButton = () => {
     const [ref, bounds] = useMeasure();
     const [showEmail, setShowEmail] = useState(false);
     const buttonStyles = useSpring({
-        width: showEmail ? (bounds.width + 13) : 13
+        width: showEmail ? (bounds.width + 13) : 13,
+        scale: showEmail ? 1.0557 : 1
+    });
+
+    const transitions = useTransition(showEmail ? addressChars : [], {
+        from: {opacity: 0, display: 'none'},
+        enter: {opacity: 1, display: 'inline'},
+        leave: {opacity: 0, display: 'none'},
+        delay: 200,
+        trail: 400 / addressChars.length,
     });
 
     return (
@@ -24,7 +51,13 @@ const EmailButton = () => {
                     className='button-text'
                     ref={ref}
                 >
-                    ryn.pair@me.com
+                    {transitions((style, addressChar) => (
+                        <animated.span
+                            style={style}
+                        >
+                            {addressChar.value}
+                        </animated.span>
+                    ))}
                 </span>
             }
         </animated.a>
