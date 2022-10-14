@@ -26,16 +26,17 @@ const EmailButton = () => {
     const [ref, bounds] = useMeasure();
     const [showEmail, setShowEmail] = useState(false);
     const buttonStyles = useSpring({
-        width: showEmail ? (bounds.width + 13) : 13,
-        scale: showEmail ? 1.0557 : 1
+        to: {
+            width: showEmail ? (bounds.width + 13) : 13,
+            scale: showEmail ? 1.0557 : 1
+        },
+        delay: 100,
     });
-
     const transitions = useTransition(showEmail ? addressChars : [], {
-        from: {opacity: 0, display: 'none'},
-        enter: {opacity: 1, display: 'inline'},
-        leave: {opacity: 0, display: 'none'},
-        delay: 200,
-        trail: 400 / addressChars.length,
+        from: {opacity: 0, scale: 0},
+        enter: {opacity: 1, scale: 1},
+        delay: 300,
+        trail: 300 / addressChars.length,
     });
 
     return (

@@ -12,6 +12,7 @@ html, body {
 .App {
   font-family: 'Futura';
   text-align: center;
+  background-color: #272727;
 }
 
 h1, h2, h3 {
@@ -46,6 +47,14 @@ a:hover, .nav-link:hover, .icon:hover {
   cursor: pointer;
   color: var(--active);
   fill: var(--active);
+  transition-property: color, fill;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+a:hover, .icon:hover {
+  color: #272727;
+  fill: #272727;
   transition-property: color, fill;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
@@ -92,7 +101,7 @@ nav {
   text-align: center;
   font-size: 13pt;
   color: var(--inactive);
-  background-color: #4A4A4A;
+  background-color: #272727;
 }
 
 .header-content {
@@ -138,6 +147,9 @@ nav {
 
 .home-container {
   min-height: calc(100vh - 55px);
+  background-color: white;
+  border-bottom-left-radius: 22.5px;
+  border-bottom-right-radius: 22.5px;
 }
 
 .tab-container {
@@ -152,6 +164,10 @@ nav {
     border-bottom-left-radius: 17px;
     border-bottom-right-radius: 17px;
   }
+  .home-container {
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+  }
 }
 
 @media screen and (max-width: 516px) {
@@ -159,13 +175,17 @@ nav {
     height: 34px;
     font-size: 13px;
   }
-
-  .home-container {
-    min-height: calc(100vh - 34px);
-  }
-  
   .tab-container {
     padding: 21px;
+  }
+  .header-content {
+    border-bottom-left-radius: 10.5px;
+    border-bottom-right-radius: 10.5px;
+  }
+  .home-container {
+    min-height: calc(100vh - 34px);
+    border-bottom-left-radius: 10.5px;
+    border-bottom-right-radius: 10.5px;
   }
 }
 
