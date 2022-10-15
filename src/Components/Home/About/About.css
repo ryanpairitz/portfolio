@@ -21,6 +21,10 @@
     display: none;
 }
 
+.link-container {
+    display: inline-block;
+}
+
 
 @media screen and (max-width: 802px) {
     .about-container {

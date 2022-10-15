@@ -4,23 +4,11 @@ import { useSpring, animated, useTransition } from "react-spring";
 import useMeasure from "react-use-measure";
 import './Contact.css';
 
-const addressChars = [
-    {key: 1, value: 'r'},
-    {key: 2, value: 'y'},
-    {key: 3, value: 'n'},
-    {key: 4, value: '.'},
-    {key: 5, value: 'p'},
-    {key: 6, value: 'a'},
-    {key: 7, value: 'i'},
-    {key: 8, value: 'r'},
-    {key: 9, value: '@'},
-    {key: 10, value: 'm'},
-    {key: 11, value: 'e'},
-    {key: 12, value: '.'},
-    {key: 13, value: 'c'},
-    {key: 14, value: 'o'},
-    {key: 15, value: 'm'}
-]
+/* split address into array of individual letters, with index as key
+so it can be used in useTransition */
+const addressChars = "ryn.pair@me.com".split("").map((value, index) => (
+    {key: index, letter: value}
+));
 
 const EmailButton = () => {
     const [ref, bounds] = useMeasure();
@@ -52,11 +40,11 @@ const EmailButton = () => {
                     className='button-text'
                     ref={ref}
                 >
-                    {transitions((style, addressChar) => (
+                    {transitions((style, addressChars) => (
                         <animated.span
                             style={style}
                         >
-                            {addressChar.value}
+                            {addressChars.letter}
                         </animated.span>
                     ))}
                 </span>
