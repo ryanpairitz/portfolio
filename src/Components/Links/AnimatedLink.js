@@ -11,18 +11,19 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
     );
     const [active, setActive] = useState(false);
     const trail = useTrail(items.length, {
+        config: { mass: items.length / 2.618, tension: 233, friction: 34 },
         loop: { reverse: active },
-        opacity: active ? 0.38 : 1,
-        transform: active ? 'translateY(-3px)' : 'translateY(0px)',
         from: {
             transform: 'translateY(0px)',
             opacity: 1
         },
+        opacity: active ? 0.38 : 1,
+        transform: active ? 'translateY(-3px)' : 'translateY(0px)',
         delay: 100
     });
     const linkStyle = useSpring({
         to: {
-            scale: active ? 1.09 : 1
+            scale: active ? 1.0557 : 1
         },
         delay: 100,
     });
