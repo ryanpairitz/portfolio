@@ -148,6 +148,10 @@ nav {
   transition-timing-function: ease-in-out;
 }
 
+.separator {
+  font-size: 13px;
+}
+
 .home-container {
   min-height: calc(100vh - 55px);
   background-color: white;
@@ -160,9 +164,12 @@ nav {
 }
 
 @media screen and (max-width: 590px) {
-  .filters {
+  /* .filters {
     font-size: 13px;
   }
+  .separator {
+    font-size: 8px;
+  } */
   .header-content {
     border-bottom-left-radius: 17px;
     border-bottom-right-radius: 17px;
@@ -221,13 +228,19 @@ nav {
     font-size: 34px;
     margin: 21px 0 0 0;
   }
+  .separator {
+    font-size: 21px;
+  }
   .tab-container {
     padding: 21px 55px 34px 55px;
   }
 }
-
+/* 
 @media screen and (min-height: 1080px) and (max-width: 1001px) {
   .filters {
     font-size: 21px;
   }
-}
+  .separator {
+    font-size: 13px;
+  }
+} */

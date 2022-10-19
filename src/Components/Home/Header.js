@@ -15,27 +15,20 @@ const Header = ({ filters, onClickHandler }) => {
                 <h2 className="subtitle">/ pair - its &#129436; /</h2>
                 <h3 className="filters">
                     <span
-                        id="uiDesign"
-                        onClick={onClickHandler}
-                        className={
-                            filters["uiDesign"] ? "filter-active filter" : "filter"
-                        }>
-                        ui/ux design
-                    </span> | <span
                         id="frontendDev"
                         onClick={onClickHandler}
                         className={
                             filters["frontendDev"] ? "filter-active filter" : "filter"
                         }>
                         frontend dev
-                    </span> | <span
+                    </span> <span className="separator">&bull;</span> <span
                         id="graphicDesign"
                         onClick={onClickHandler}
                         className={
                             filters["graphicDesign"] ? "filter-active filter" : "filter"
                         }>
                         graphic design
-                    </span> | <span
+                    </span> <span className="separator">&bull;</span> <span
                         id="animation"
                         onClick={onClickHandler}
                         className={

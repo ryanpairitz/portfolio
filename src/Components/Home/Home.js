@@ -3,7 +3,6 @@ import Header from "./Header";
 import { Outlet } from "react-router-dom";
 
 const initialFilters = {
-    uiDesign: false,
     frontendDev: false,
     graphicDesign: false,
     animation: false

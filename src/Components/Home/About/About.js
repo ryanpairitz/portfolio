@@ -34,6 +34,7 @@ const About = () => {
                     <AnimatedLink>
                         ivi
                     </AnimatedLink>, earned a place in the 2022 Race to Revenue startup incubator cohort.</p>
+                <p>When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or finding new crafts to get into. Or I'm just thinking. &#40;You know, philosophically.&#41;</p>
                 <Contact />
             </div>
             <div className="about-svg-container-alt"><GoldenParrot /></div>

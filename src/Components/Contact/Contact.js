@@ -4,7 +4,7 @@ import "./Contact.css";
 const Contact = () => {
     return (
         <p className="line">
-            <b>Feel free to reach out:</b>
+            <b>Want to talk? Reach out!</b>
             <EmailButton />
         </p>
     );
