@@ -1,0 +1,40 @@
+.home-bar {
+    position: fixed;
+    padding: 21px 34px;
+    padding-bottom: 21px;
+    border-bottom-left-radius: 22.5px;
+    border-bottom-right-radius: 22.5px;
+    width: calc(100% - 34px - 34px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E3E3E3;
+    z-index: 100;
+}
+
+.brandmark {
+    fill: #272727;
+}
+
+.brandmark:hover {
+    cursor: pointer;
+}
+
+.home-bar-icon {
+    margin-left: 13px;
+    fill: #272727;
+    z-index: 101;
+}
+
+@media screen and (max-width: 516px) {
+    .home-bar {
+        padding: 13px 21px;
+        padding-bottom: 13px;
+        width: calc(100% - 21px - 21px);
+        border-bottom-left-radius: 10.5px;
+        border-bottom-right-radius: 10.5px;
+    }
+    .home-bar-icon {
+        margin-left: 8px;
+    }
+}

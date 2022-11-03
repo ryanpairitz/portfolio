@@ -23,7 +23,7 @@ const About = () => {
                         <TwitterIcon className="icon" />
                         <b>&#41;</b>
                     </AnimatedLink>, a designer, developer, and animator. I specialize in user experience, frontend development, and design, and I have been doing freelance work since I was 14.</p>
-                <p>I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
+                <p>A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
                     <AnimatedLink to="#">
                         The Shirt
                     </AnimatedLink> — the highest-selling piece of collegiate apparel in the nation.</p>

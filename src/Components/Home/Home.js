@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
+import HomeBar from "./HomeBar";
 
 const initialFilters = {
     frontendDev: false,
@@ -32,6 +33,7 @@ const Home = () => {
 
     return (
         <div className="home-container">
+            <HomeBar />
             <Header filters={filters} onClickHandler={onClickHandler}/>
             <Outlet context={filters}/>
         </div>
