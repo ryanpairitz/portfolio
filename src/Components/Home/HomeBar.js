@@ -9,31 +9,53 @@ import './HomeBar.css';
 const HomeBar = () => {
     return (
         <div className='home-bar'>
-            <Brandmark
-                width={34}
-                className='brandmark'
-                onClick={() => {
-                    window.scrollTo({
-                        top: 0,
-                        left: 0,
-                        behavior: 'smooth'
-                    })
-                }}
-            />
-            <div className='social-icons-container'>
-                <a href="https://www.instagram.com/ryanpairitz/" target="_blank" rel="noopener noreferrer">
+            <span className='icons-container'>
+                <Brandmark
+                    width={34}
+                    className='brandmark'
+                    onClick={() => {
+                        window.scrollTo({
+                            top: 0,
+                            left: 0,
+                            behavior: 'smooth'
+                        })
+                    }}
+                />
+            </span>
+            <div className='icons-container'>
+                <a href="https://www.instagram.com/ryanpairitz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='icon-container'
+                >
                     <InstagramIcon width={21} className='home-bar-icon' />
                 </a>
-                <a href="https://twitter.com/ryanparrots" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/ryanparrots"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='icon-container'
+                >
                     <TwitterIcon height={21} className='home-bar-icon' />
                 </a>
-                <a href="https://www.tiktok.com/@ryanpairitz" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.tiktok.com/@ryanpairitz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='icon-container'
+                >
                     <TikTokIcon width={21} className='home-bar-icon' />
                 </a>
-                <a href="https://www.linkedin.com/in/ryan-pairitz-462440222/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/ryan-pairitz-462440222/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='icon-container'
+                >
                     <LinkedInIcon width={21} className='home-bar-icon' />
                 </a>
-                <a href="https://github.com/ryanpairitz" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/ryanpairitz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='icon-container'
+                >
                     <GitHubIcon width={21} className='home-bar-icon' />
                 </a>
             </div>
