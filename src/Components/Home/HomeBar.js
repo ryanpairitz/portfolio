@@ -12,7 +12,7 @@ const HomeBar = () => {
             <span className='icons-container'>
                 <Brandmark
                     width={34}
-                    className='brandmark'
+                    className='home-bar-icon'
                     onClick={() => {
                         window.scrollTo({
                             top: 0,

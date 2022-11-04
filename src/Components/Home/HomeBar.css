@@ -12,20 +12,23 @@
     z-index: 100;
 }
 
-.brandmark {
-    fill: #272727;
+.home-bar-icon {
+    fill: #585858;
+    transition-property: fill;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 
-.brandmark:hover {
+.home-bar-icon:hover {
     cursor: pointer;
+    fill: #272727;
+    transition-property: fill;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
 }
 
 .icon-container {
     margin-left: 13px;
-}
-
-.home-bar-icon {
-    fill: #272727;
 }
 
 @media screen and (max-width: 640px) {
