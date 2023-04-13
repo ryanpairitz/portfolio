@@ -1,13 +1,13 @@
 .home-bar {
     position: fixed;
-    padding: 34px;
+    padding: 1rem;
     padding-bottom: 21px;
     border-bottom-left-radius: 22.5px;
     border-bottom-right-radius: 22.5px;
     width: calc(100% - 34px - 34px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     background-color: #E3E3E3;
     z-index: 100;
 }
@@ -27,9 +27,9 @@
     transition-timing-function: ease-in-out;
 }
 
-.icon-container {
+/* .icon-container {
     margin-left: 13px;
-}
+} */
 
 @media screen and (max-width: 640px) {
     .home-bar {

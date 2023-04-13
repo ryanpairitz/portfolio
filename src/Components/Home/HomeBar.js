@@ -9,7 +9,7 @@ import './HomeBar.css';
 const HomeBar = () => {
     return (
         <div className='home-bar'>
-            <span className='icons-container'>
+            <span>
                 <Brandmark
                     width={34}
                     className='home-bar-icon'
@@ -22,7 +22,7 @@ const HomeBar = () => {
                     }}
                 />
             </span>
-            <div className='icons-container'>
+            <div>
                 <a href="https://www.instagram.com/ryanpairitz/"
                     target="_blank"
                     rel="noopener noreferrer"

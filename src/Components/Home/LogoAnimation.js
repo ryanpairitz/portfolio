@@ -28,7 +28,7 @@ const LogoAnimation = () => {
     return (
         <span 
             ref={logoContainer}
-            className='header-logo'
+            className='header-logo-container'
         />
     );
 };

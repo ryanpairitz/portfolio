@@ -20,13 +20,13 @@ const Projects = () => {
                 :
                 `Project list comp`}</h2>
             <ul>
-                {filters["uiDesign"] && (
+                {filters["uidesign"] && (
                     <li>ui/ux design</li>
                 )}
-                {filters["frontendDev"] && (
+                {filters["frontenddev"] && (
                     <li>frontend dev</li>
                 )}
-                {filters["graphicDesign"] && (
+                {filters["graphicdesign"] && (
                     <li>graphic design</li>
                 )}
                 {filters["animation"] && (

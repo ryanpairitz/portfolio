@@ -1,7 +1,7 @@
 .about-container {
     display: flex;
     justify-content: space-between;
-    gap: 21px;
+    gap: 0.618rem;
 }
 
 .about-text-container {
