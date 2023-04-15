@@ -1,12 +1,15 @@
 import EmailButton from "./EmailButton";
 import "./Contact.css";
+import AnimatedP from "../Home/About/AnimatedP";
 
 const Contact = () => {
     return (
-        <p className="line">
-            <b>Want to talk? Reach out!</b>
-            <EmailButton />
-        </p>
+        <div className="line-container">
+            <AnimatedP className="line">
+                <b>Want to talk? Reach out:</b>
+                <EmailButton />
+            </AnimatedP>
+        </div>
     );
 };
 

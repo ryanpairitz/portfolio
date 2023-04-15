@@ -1,6 +1,7 @@
 import { Children, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { animated, useTrail, useSpring } from "react-spring";
+import { animated, useTrail, useSpring } from "@react-spring/web";
+import AnimatedButton from '../Home/AnimatedButton';
 import './Link.css';
 
 const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
@@ -17,7 +18,7 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
             transform: 'translateY(0px)',
             opacity: 1
         },
-        opacity: active ? 0.38 : 1,
+        opacity: active ? 0.618 : 1,
         transform: active ? 'translateY(-3px)' : 'translateY(0px)',
         delay: 100
     });
@@ -29,6 +30,7 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
     });
 
     return (
+        <AnimatedButton reverse={true}>
         <animated.span className="link-container"
         style={linkStyle}>
             {href ?
@@ -83,6 +85,7 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
                 </Link>
             }
         </animated.span>
+        </AnimatedButton>
     );
 };
 

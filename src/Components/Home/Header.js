@@ -1,6 +1,7 @@
 import LogoAnimation from "./LogoAnimation";
 import AnimatedNavLink from "./AnimatedNavLink";
 import Background from "./Background";
+import AnimatedButton from "./AnimatedButton";
 
 const Header = ({ filters, onClickHandler }) => {
     const FilterList = [
@@ -15,21 +16,20 @@ const Header = ({ filters, onClickHandler }) => {
             <div className="header-content">
                 <div className="hero">
                     <h1 className="title">ryan pairitz</h1>
-                    <h2 className="subtitle">/ pair - its &#129436; /</h2>
+                    <h2 className="subtitle">/ pair - its&nbsp;<span>&#129436;</span>&nbsp;/</h2>
                     <h3 className="filters">
                         {FilterList.map((filter, index) => {
                             const id = filter.replace('-', '');
                             return (
                                 <span
                                     key={index}>
-                                    <span
+                                    <AnimatedButton 
                                         id={id}
-                                        onClick={onClickHandler}
-                                        className={
-                                            filters[id] ? "filter-active filter" : "filter"
-                                        }>
+                                        className="filter"
+                                        active={filters[id]}
+                                        onClickHandler={onClickHandler}>
                                         {filter.replace('-', ' ')}
-                                    </span>
+                                    </AnimatedButton>
                                     {index + 1 !== FilterList.length &&
                                         <>
                                             <p>&nbsp;</p>

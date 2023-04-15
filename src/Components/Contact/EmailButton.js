@@ -1,31 +1,45 @@
 import { useState } from 'react';
 import { ReactComponent as EmailIcon } from '../img/icons_email.svg';
-import { useSpring, animated, useTransition } from "react-spring";
+import { useSpring, animated, useTransition, useSpringRef, useChain } from "@react-spring/web";
 import useMeasure from "react-use-measure";
 import './Contact.css';
+import IconEmail from './IconEmail';
 
 /* split address into array of individual letters, with index as key
 so it can be used in useTransition */
 const addressChars = "ryn.pair@me.com".split("").map((value, index) => (
     {key: index, letter: value}
 ));
+function convertRemToPixels(x) {
+    const remValue = parseFloat(getComputedStyle(document.documentElement).fontSize)
+    return x * remValue / 34;
+}
 
 const EmailButton = () => {
+    const baseWidth = convertRemToPixels(21);
     const [ref, bounds] = useMeasure();
     const [showEmail, setShowEmail] = useState(false);
+    const springApi = useSpringRef();
     const buttonStyles = useSpring({
+        ref: springApi,
+        from: {
+            width: baseWidth,
+            scale: 1
+        },
         to: {
-            width: showEmail ? (bounds.width + 13) : 13,
+            width: showEmail ? (bounds.width + baseWidth) : baseWidth,
             scale: showEmail ? 1.0557 : 1
         },
         delay: 100,
     });
+    const transApi = useSpringRef();
     const transitions = useTransition(showEmail ? addressChars : [], {
+        ref: transApi,
         from: {opacity: 0, scale: 0},
         enter: {opacity: 1, scale: 1},
-        delay: 300,
         trail: 300 / addressChars.length,
     });
+    useChain([springApi, transApi], [0,0.1]);
 
     return (
         <animated.a className='button'
@@ -34,7 +48,7 @@ const EmailButton = () => {
             href={showEmail ? "mailto:ryn.pair@me.com" : "#"}
             style={buttonStyles}
         >
-            <EmailIcon className="email-icon"/>
+            <IconEmail width={baseWidth} className="email-icon"/>
             {showEmail &&
                 <span
                     className='button-text'

@@ -3,12 +3,12 @@
   --inactive: #B1B1B1;
   --primary-font: "azo-sans-web", sans-serif;
   --header-font: "grenadine-mvb", sans-serif;
-  --sun-conure: #C99136;
+  --sun-conure: #E2911B;
   --khaki: #EAD7A1;
-  --scarlet: #A32E14;
-  --forest: #00150C;
-  --spruce: #051C13;
-  --green-parakeet: #27380D;
+  --scarlet: #DD4623;
+  --forest: #001412;
+  --spruce: #0B1C18;
+  --green-parakeet: #155243;
   --inactive: #C1B081;
   --cool-neutral: #F5F0D3;
 }
@@ -116,6 +116,24 @@ nav {
   color: var(--cool-neutral);
 }
 
+.underline-button {
+  position: relative;
+  cursor: pointer;
+  /* padding-bottom: calc(13rem / 34); */
+}
+
+.underline {
+  position: absolute;
+  /* bottom: calc(-13rem / 34); */
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+.nav-link.underline-button > .underline {
+  bottom: 0;
+}
+
 .icons-container {
   position: fixed;
   top: calc(62rem / 34);
@@ -128,15 +146,32 @@ nav {
   row-gap: calc(13rem / 34);
 }
 
+/* .icon-container {
+  width: calc(42rem / 34);
+  height: calc(42rem / 34);
+  border-radius: 50%;
+  background-color: rgba(21,82,67,0.15);
+  position: relative;
+} */
+
 .icon {
-  height: 1rem;
+  height: calc(42rem / 34);
   fill: var(--green-parakeet);
   display: block;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); */
 }
 
 .icon-tiktok {
-  width: 1rem;
+  width: calc(13rem / 34);
   height: auto;
+}
+
+.icon-inline {
+  fill: var(--cool-neutral);
+  height: 0.618rem;
 }
 
 .title {
@@ -150,16 +185,25 @@ nav {
   font-weight: 300;
 }
 
+.subtitle > span {
+  filter: brightness(0.45) sepia(100%) hue-rotate( 110deg ) saturate(200%);
+}
+
 .footer {
   height: 2.618rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   font-size: 0.618rem;
   font-weight: 300;
   color: var(--cool-neutral);
   background-color: var(--forest);
+}
+
+.footer > p {
+  font-size: inherit;
+  color: inherit;
+  text-align: center;
 }
 
 .header-wrapper {
@@ -200,6 +244,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   height: 100%;
+  fill: var(--forest);
 }
 
 .hero {
@@ -211,21 +256,8 @@ nav {
   font-style: italic;
   font-size: 1rem;
   color: var(--sun-conure);
-  opacity: 0.75;
   margin-bottom: 1rem;
   transition-property: color;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-
-.filter-active, .filters {
-  opacity: 1;
-}
-
-.filter:hover {
-  opacity: 1;
-  cursor: pointer;
-  transition-property: opacity;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
