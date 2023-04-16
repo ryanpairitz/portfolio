@@ -11,19 +11,13 @@
 
 .about-illustration-container {
     flex: 1 1 38.2%;
-    /* float: left; */
-    /* width: 38.2%; */
     display: flex;
     flex-direction: column;
     margin: 0.618rem 0;
     margin-left: 0;
-    /* max-height: 76.39vh; */
     background: rgba(221,70,35,0.382);
     border-radius: calc(22.5rem / 34);
 }
-
-/* .about-illustration {
-} */
 
 .link-container {
     display: inline-block;
