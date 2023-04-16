@@ -31,60 +31,60 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
 
     return (
         <AnimatedButton reverse={true}>
-        <animated.span className="link-container"
-        style={linkStyle}>
-            {href ?
-                <a onMouseEnter={() => setActive(true)}
-                    onMouseLeave={() => setActive(false)}
-                    className="link-text"
-                    href={href}
-                    target="_blank" rel="noopener noreferrer"
-                >
-                    {hasManyTypes ?
-                        trail.map((style, index) => (
-                            <animated.span key={index} style={style}>
-                                {items[index]}
-                            </animated.span>
-                        ))
-                        :
-                        trail.map((style, index) => (
-                            items[index].char === ' ' ?
-                                <animated.b key={index} style={style}>
-                                    &nbsp;
-                                </animated.b>
-                                :
-                                <animated.b key={index} style={style}>
-                                    {items[index].char}
-                                </animated.b>
-                        ))
-                    }
-                </a> :
-                <Link onMouseEnter={() => setActive(true)}
-                    onMouseLeave={() => setActive(false)}
-                    className="link-text"
-                    to={to}
-                >
-                    {hasManyTypes ?
-                        trail.map((style, index) => (
-                            <animated.span key={index} style={style}>
-                                {items[index]}
-                            </animated.span>
-                        ))
-                        :
-                        trail.map((style, index) => (
-                            items[index].char === ' ' ?
-                                <animated.b key={index} style={style}>
-                                    &nbsp;
-                                </animated.b>
-                                :
-                                <animated.b key={index} style={style}>
-                                    {items[index].char}
-                                </animated.b>
-                        ))
-                    }
-                </Link>
-            }
-        </animated.span>
+            <animated.span className="link-container"
+                style={linkStyle}>
+                {href ?
+                    <a onMouseEnter={() => setActive(true)}
+                        onMouseLeave={() => setActive(false)}
+                        className="link-text"
+                        href={href}
+                        target="_blank" rel="noopener noreferrer"
+                    >
+                        {hasManyTypes ?
+                            trail.map((style, index) => (
+                                <animated.span key={index} style={style}>
+                                    {items[index]}
+                                </animated.span>
+                            ))
+                            :
+                            trail.map((style, index) => (
+                                items[index].char === ' ' ?
+                                    <animated.b key={index} style={style}>
+                                        &nbsp;
+                                    </animated.b>
+                                    :
+                                    <animated.b key={index} style={style}>
+                                        {items[index].char}
+                                    </animated.b>
+                            ))
+                        }
+                    </a> :
+                    <Link onMouseEnter={() => setActive(true)}
+                        onMouseLeave={() => setActive(false)}
+                        className="link-text"
+                        to={to}
+                    >
+                        {hasManyTypes ?
+                            trail.map((style, index) => (
+                                <animated.span key={index} style={style}>
+                                    {items[index]}
+                                </animated.span>
+                            ))
+                            :
+                            trail.map((style, index) => (
+                                items[index].char === ' ' ?
+                                    <animated.b key={index} style={style}>
+                                        &nbsp;
+                                    </animated.b>
+                                    :
+                                    <animated.b key={index} style={style}>
+                                        {items[index].char}
+                                    </animated.b>
+                            ))
+                        }
+                    </Link>
+                }
+            </animated.span>
         </AnimatedButton>
     );
 };

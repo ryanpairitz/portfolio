@@ -1,44 +1,30 @@
-import { animated, useSpring, useTransition } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 
 function convertRemToPixels(x) {
     const remValue = parseFloat(getComputedStyle(document.documentElement).fontSize)
     return x * remValue / 34;
 }
 
-const Underline = ({ width, height, active, hovering,
+const AnimatedUnderline = ({ width, height, active, hovering,
     color, activeColor, reverse, useSwatches }) => {
-    if (color === null) {
+    if (color == null) {
         color = "#E2911B";
     }
-    if (activeColor === null) {
+    if (activeColor == null) {
         activeColor = color;
     }
-    if (active === null) {
+    if (active == null) {
         active = hovering;
     }
-    const transition = useTransition(reverse ? !(active || hovering) : (active || hovering), {
-        from: {
-            width: 0,
-            opacity: 0
-        },
-        enter: {
-            width: width,
-            opacity: 1
-        },
-        leave: {
-            width: 0,
-            opacity: 0
-        },
-        reverse: reverse
-    });
-    const colorStyle = useSpring({
-        from: {
-            fill: active ? color : activeColor
-        },
+    const style = useSpring({
         to: {
-            fill: active ? activeColor : color
-        }
-    })
+            width: (reverse && !(active || hovering)) || 
+                (!reverse && (active || hovering)) ? width : 0,
+            opacity: (reverse && !(active || hovering)) || 
+                (!reverse && (active || hovering)) ? 1 : 0,
+            fill: active ? activeColor : color,
+        },
+    });
     height = convertRemToPixels(height);
 
     return (
@@ -52,10 +38,7 @@ const Underline = ({ width, height, active, hovering,
             {useSwatches ?
                 <g>
                     <defs>
-                        {transition((animatedStyle, content) => (
-                            content &&
-                            <animated.rect id="SVGID_1_" height={height} style={animatedStyle} />
-                        ))}
+                        <animated.rect id="SVGID_1_" height={height} style={style} />
                     </defs>
                     <clipPath id="SVGID_00000044864584398808820940000010129106012025892265_">
                         <use xlinkHref="#SVGID_1_" overflow="visible" />
@@ -71,16 +54,10 @@ const Underline = ({ width, height, active, hovering,
                     </g>
                 </g>
                 :
-                transition((animatedStyle, content) => (
-                    content &&
-                    <animated.rect x="0" y="0" height={height}
-                        style={{
-                            ...animatedStyle,
-                            ...colorStyle
-                        }} />
-                ))}
+                <animated.rect x="0" y="0" height={height} style={style} />
+                }
         </svg>
     );
 };
 
-export default Underline;
+export default AnimatedUnderline;

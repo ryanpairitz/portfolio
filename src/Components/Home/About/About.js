@@ -1,9 +1,7 @@
-import { ReactComponent as GoldenParrot } from "./goldenParrot.svg";
-import { ReactComponent as TwitterIcon } from "../../img/icons_twitter.svg";
 import Contact from "../../Contact/Contact";
 import AnimatedLink from "../../Links/AnimatedLink";
 import "./About.css";
-import IconTwitter from "../../img/IconTwitter";
+import IconInstagram from "../../img/IconInstagram";
 import IllustrationParrot from "./IllustrationParrot";
 import AnimatedP from "./AnimatedP";
 
@@ -21,14 +19,14 @@ const About = () => {
             <span className="about-text-container">
                 {/* <IllustrationParrot className="about-illustration about-illustration-container" /> */}
                 <AnimatedP>
-                    <AnimatedLink href="https://twitter.com/ryanparrots" hasManyTypes={true}>
+                    <AnimatedLink href="https://www.instagram.com/ryanpairitz/" hasManyTypes={true}>
                         {"Hi! I'm Ryan Pairitz (".split('').map((value, index) => (
                             value === ' ' ?
                                 <b key={index}>&nbsp;</b>
                                 :
                                 <b key={index}>{value}</b>
                         ))}
-                        <IconTwitter className="icon-inline" />
+                        <IconInstagram className="icon-inline" />
                         <b>&#41;</b>
                     </AnimatedLink>, a designer, developer, and animator. I specialize in user experience, frontend development, and design, and I have been doing freelance work since I was 14.
                 </AnimatedP>

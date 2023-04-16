@@ -18,9 +18,6 @@ const Home = () => {
     const [filters, setFilters] = useState(initialFilters);
     const [hovering, setHovering] = useState(false);
     const logoStyle = useSpring({
-        from: {
-            scale: hovering ? 1 : scalar
-        },
         to: {
             scale: hovering ? scalar : 1
         }
