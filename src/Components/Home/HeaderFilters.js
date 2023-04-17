@@ -1,8 +1,9 @@
 import AnimatedButton from "./AnimatedButton";
 
 const FilterList = [
-    "frontend-dev",
     "graphic-design",
+    "ui/ux-design",
+    "frontend-dev",
     "animation"
 ];
 
@@ -10,7 +11,7 @@ const HeaderFilters = ({ filters, onClickHandler }) => {
     return (
         <h3 className="filters">
             {FilterList.map((filter, index) => {
-                const id = filter.replace('-', '');
+                const id = filter.replace(/-|\//g, '');
                 return (
                     <span
                         key={index}>

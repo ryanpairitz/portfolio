@@ -1,28 +1,3 @@
-:root {
-  --active: #585858;
-  --inactive: #B1B1B1;
-  --primary-font: "azo-sans-web", sans-serif;
-  --header-font: "grenadine-mvb", sans-serif;
-  --sun-conure: #E2911B;
-  --khaki: #EAD7A1;
-  --scarlet: #DD4623;
-  --forest: #001412;
-  --spruce: #0B1C18;
-  --green-parakeet: #155243;
-  --inactive: #C1B081;
-  --cool-neutral: #F5F0D3;
-}
-
-html, body {
-  font-size: 30.6px;
-  color: var(--cool-neutral);
-  background-color: var(--forest);
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: rgba(0,0,0,0.05);
-}
-
 .App {
   font-family: var(--primary-font);
   text-align: center;
