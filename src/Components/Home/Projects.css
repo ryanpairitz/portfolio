@@ -1,0 +1,35 @@
+.list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.list,
+.list:after,
+.list:before,
+.list *,
+.list *:after,
+.list *:before {
+  box-sizing: border-box;
+}
+
+.list > div {
+    position: absolute;
+    will-change: transform, width, height, opacity;
+    padding: 0.5rem;
+}
+
+.list > div > div {
+    position: relative;
+    background-color: var(--spruce);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* text-transform: uppercase; */
+    /* font-size: 10px; */
+    /* line-height: 10px; */
+    border-radius: calc(22.5rem / 34);
+    /* box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2); */
+}

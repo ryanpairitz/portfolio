@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext, useLocation } from 'react-router-dom';
+import ProjectsMasonry from './ProjectsMasonry';
 
 const ProjectList = [
 	{
-		id: "ivi",
+		id: 0,
 		title: "ivi",
         logo: "",
 		cardImg: "",
         private: false,
         personal: false,
+        height: 610,
 		tags: [
             // may also include subtags (e.g. graphic design > branding, logo design, ...)
 			"graphic design",
+			"ui/ux design",
 			"frontend dev",
 		],
 		// below is all additional detail for the detail view
@@ -34,7 +37,35 @@ const ProjectList = [
                 ]
             }
         ],
-	}
+	},
+    {
+		id: 1,
+        height: 987,
+		title: "The Shirt",
+        logo: "",
+		cardImg: "",
+        private: false,
+        personal: false,
+		tags: [
+            // may also include subtags (e.g. graphic design > branding, logo design, ...)
+			"graphic design",
+		],
+    },
+    {
+		id: 2,
+        height: 610,
+		title: "Partake",
+        logo: "",
+		cardImg: "",
+        private: false,
+        personal: false,
+		tags: [
+            // may also include subtags (e.g. graphic design > branding, logo design, ...)
+			"graphic design",
+			"ui/ux design",
+			"frontend dev",
+		],
+    },
 ]
 
 const Projects = () => {
@@ -62,18 +93,19 @@ const Projects = () => {
 
     return (
         <div className="projects-container">
-            <h2>{filterByPersonal ?
+            {/* <h2>{filterByPersonal ?
                 `Personal project list comp`
                 :
-                `Project list comp`}</h2>
-            <ul>
+                `Project list comp`}</h2> */}
+            {/* <ul>
                 {filterList.map((filter,index) => (
                     <li key={index}>{filter}</li>
                 ))}
                 {projectList.map((project,index) => (
                     <li key={index}>{project.title}</li>
                 ))}
-            </ul>
+            </ul> */}
+            <ProjectsMasonry projectList={projectList} />
         </div>
     );
 };
