@@ -1,6 +1,7 @@
 import { animated, useTransition } from "@react-spring/web";
 import { useEffect, useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
+import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 
 function useMedia(queries, values, defaultValue) {
@@ -16,10 +17,10 @@ function useMedia(queries, values, defaultValue) {
 
 const ProjectsMasonry = ({ projectList }) => {
     // tie media queries to the number of columns
-    const columns = useMedia(['(min-width: 2000px)', '(min-width: 1500px)', '(min-width: 1000px)'], [4, 3, 2], 1);
-    // Hook2: Measure the width of the container element
+    const columns = useMedia(['(min-width: 2000px)', '(min-width: 1500px)', '(min-width: 1078px)'], [4, 3, 2], 1);
+    // measure the width of the container element
     const [ref, { width }] = useMeasure();
-    // form a grid of stacked items using width & columns we got from hooks 1 & 2
+    // form a grid of stacked items using width & column count
     const [heights, gridItems] = useMemo(() => {
         let heights = new Array(columns).fill(0); // Each column gets a height starting with zero
         let gridItems = projectList.map((project, i) => {
@@ -45,9 +46,7 @@ const ProjectsMasonry = ({ projectList }) => {
         <div ref={ref} className="list" style={{ height: Math.max(...heights) }}>
             {transitions((style, project) => (
                 <animated.div style={style}>
-                    <div>{project.title}</div>
-                    {/* <div style={{ backgroundImage: `url(${project.css}?auto=compress&dpr=2&h=500&w=500)` }} /> */}
-                    {/* replace the above with svg? or do something similar to header bg logo animation */}
+                    <ProjectCard project={project}/>
                 </animated.div>
             ))}
         </div>

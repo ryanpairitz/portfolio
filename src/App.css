@@ -92,6 +92,10 @@ nav {
   bottom: 0;
 }
 
+#SVGID_1_ {
+  clip-path: url(#SVGID_00000044864584398808820940000010129106012025892265_);
+}
+
 .icons-container {
   position: fixed;
   top: calc(62rem / 34);

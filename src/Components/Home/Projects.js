@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext, useLocation } from 'react-router-dom';
+import { CardIvi } from './CardIvi';
+import { CardTheShirt } from './CardTheShirt';
 import ProjectsMasonry from './ProjectsMasonry';
 
 const ProjectList = [
@@ -7,7 +9,7 @@ const ProjectList = [
 		id: 0,
 		title: "ivi",
         logo: "",
-		cardImg: "",
+		cardImg: <CardIvi />,
         private: false,
         personal: false,
         height: 610,
@@ -19,9 +21,9 @@ const ProjectList = [
 		],
 		// below is all additional detail for the detail view
 		theme: {
-			neutral: "", // to be used in background
-			darkNeutral: "", // to be used as background accent, like as bg for call to action	
-			primary: "", // to be used most often, like greenparakeet color, in calls to action + links
+			neutral: "#0c1f1f", // to be used in background
+			raisedNeutral: "#011211", // to be used as background accent, like as bg for call to action	
+			primary: "#00dbb5", // to be used most often, like greenparakeet color, in calls to action + links
 			accent: ""
 		},
         bannerImg: "",
@@ -41,15 +43,21 @@ const ProjectList = [
     {
 		id: 1,
         height: 987,
-		title: "The Shirt",
+		title: "The Shirt 2020",
         logo: "",
-		cardImg: "",
+		cardImg: <CardTheShirt/>,
         private: false,
         personal: false,
 		tags: [
             // may also include subtags (e.g. graphic design > branding, logo design, ...)
 			"graphic design",
 		],
+		theme: {
+			neutral: "#010a12",
+			raisedNeutral: "#0b131c",
+			primary: "#9b5f17",
+			accent: ""
+		},
     },
     {
 		id: 2,
@@ -65,6 +73,12 @@ const ProjectList = [
 			"ui/ux design",
 			"frontend dev",
 		],
+		theme: {
+			neutral: "#1c1821",
+			raisedNeutral: "#0d0d1a",
+			primary: "#9bd2f2",
+			accent: ""
+		},
     },
 ]
 
