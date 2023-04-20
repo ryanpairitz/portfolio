@@ -46,6 +46,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    transform: unset !important; /* so lottie animations don't appear blurry on Chrome */
 }
 
 .card-content {
@@ -58,6 +59,19 @@
     align-items: flex-end;
     padding: 0.618rem;
     gap: 0.618rem
+}
+
+.card-content > .logo {
+    /* order: 1; */
+    display: block;
+    line-height: 0;
+}
+
+.card-content > .logo > svg {
+    height: 1rem;
+}
+.card-content > .logo > svg#the-shirt, svg#vinal {
+    height: 1.618rem;
 }
 
 .card-title {
@@ -74,16 +88,16 @@
     left: 0; */
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row-reverse wrap-reverse;
     /* margin: 0.618rem; */
-    font-size: .618rem;
-    gap: calc(8em / 21);
+    font-size: calc(16rem / 34);
+    gap: calc(8em / 16);
 }
 
 .tags > li {
     font-style: italic;
     font-weight: 500;
     width: max-content;
-    padding: .382em .618em;
-    border-radius: calc(10.5em / 21);
+    padding: calc(3em / 16) calc(8em / 16);
+    border-radius: calc(10.5em / 16);
 }

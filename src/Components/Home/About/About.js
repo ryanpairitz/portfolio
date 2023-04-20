@@ -29,20 +29,20 @@ const About = () => {
                     </AnimatedP>
                     <AnimatedP>
                         A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
-                        <AnimatedLink to="#">
+                        <AnimatedLink to="/project/1">
                             The Shirt
                         </AnimatedLink> — the highest-selling piece of collegiate apparel in the nation.
                     </AnimatedP>
                     <AnimatedP>
                         I have designed and developed multiple apps for web or mobile. One of which,&nbsp;
                         <NoWrap>
-                            <AnimatedLink>
+                            <AnimatedLink to="/project/3">
                                 Partake
                             </AnimatedLink>
                             ,</NoWrap>
                         &nbsp;was granted an award by the University of Notre Dame. Another app,&nbsp;
                         <NoWrap>
-                            <AnimatedLink>
+                            <AnimatedLink to="/project/0">
                                 ivi
                             </AnimatedLink>
                             ,</NoWrap>

@@ -1,10 +1,7 @@
 export const CardTheShirt = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-        viewBox="0 0 75 100" preserveAspectRatio='xMidYMid meet'
-        style={{
-            backgroundColor: "#0B1C18"
-        }}>
+        viewBox="0 0 75 100" preserveAspectRatio='xMidYMid meet'>
 <g id="Layer_8">
 	<g>
 		<path fill="#9B5F17" d="M73.4730835,27.1646023H1.526875c-0.4408942,0-0.7983314-0.3573952-0.7983314-0.7983322

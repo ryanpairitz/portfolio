@@ -144,7 +144,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 0.618rem;
+  font-size: calc(16rem / 34);
   font-weight: 300;
   color: var(--cool-neutral);
   background-color: var(--forest);
@@ -199,7 +199,7 @@ nav {
 
 .hero {
   text-align: right;
-  margin: 0 calc(154rem / 34);
+  margin: 0 calc(152rem / 34);
 }
 
 .filters {
@@ -224,18 +224,21 @@ nav {
   font-size: 0.618rem;
 }
 
-.projects-container {
-  /* background: linear-gradient(var(--forest), var(--forest), var(--spruce)); */
-}
-
 .view-container {
   min-height: 61.8vh;
-  padding: 1.618rem calc(152rem / 34) 2.618rem calc(152rem / 34);
+  padding: 1.618rem calc((152rem / 34) - 0.5rem) 2.618rem calc((152rem / 34) - 0.5rem);
   background: linear-gradient(var(--forest), var(--forest), var(--spruce));
+  /* background: var(--spruce); */
   border-bottom-left-radius: calc(44.5rem / 34);
   border-bottom-right-radius: calc(44.5rem / 34);
 }
 
 .view-container-alt {
   background: var(--spruce);
+  padding: 1.618rem calc(152rem / 34) 2.618rem calc(152rem / 34);
 }
+
+/* .project-container {
+  box-sizing: border-box;
+
+} */

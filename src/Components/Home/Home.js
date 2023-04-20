@@ -12,18 +12,12 @@ const initFilters = {
     uiuxdesign: false,
     animation: false
 };
-const initFilterList = [
-    "graphic design",
-    "ui/ux design",
-    "frontend dev",
-    "animation",
-];
 
 const Home = () => {
     const scalar = 1.0557;
     const location = useLocation();
     const [filters, setFilters] = useState(initFilters);
-    const [filterList, setFilterList] = useState(initFilterList);
+    const [filterList, setFilterList] = useState([]);
     const [hovering, setHovering] = useState(false);
     const logoStyle = useSpring({
         to: {
@@ -31,25 +25,15 @@ const Home = () => {
         }
     });
     useEffect(() => {
-        const allFiltersAreSelected = Object.values(filters).every(
-            value => value === true
-        ) || Object.values(filters).every(value => value === false);
-        if (allFiltersAreSelected) {
-            // disable/enable all filters
-            setFilters(initFilters);
-            setFilterList(initFilterList);
-        }
-        else {
-            const tempFilterList = Object.keys(filters).filter(
-                filter => filters[filter]
-            ).map(filter => {
-                filter = filter.replace("graphicdesign","graphic design");
-                filter = filter.replace("uiuxdesign","ui/ux design");
-                filter = filter.replace("frontenddev","frontend dev");
-                return filter;
-            });
-            setFilterList(tempFilterList);
-        }
+        const tempFilterList = Object.keys(filters).filter(
+            filter => filters[filter]
+        ).map(filter => {
+            filter = filter.replace("graphicdesign", "graphic design");
+            filter = filter.replace("uiuxdesign", "ui/ux design");
+            filter = filter.replace("frontenddev", "frontend dev");
+            return filter;
+        });
+        setFilterList(tempFilterList);
     }, [filters]);
 
     const onClickHandler = (e) => {

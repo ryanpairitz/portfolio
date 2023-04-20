@@ -5,6 +5,7 @@ import {
 import Footer from "./Footer";
 import About from "./Home/About/About";
 import Home from "./Home/Home";
+import ProjectDetails from "./Home/ProjectDetails";
 import Projects from "./Home/Projects";
 import NotFound from "./NotFound";
 
@@ -19,6 +20,7 @@ const Components = () => {
                     <Route path="about" element={<About />}/>
                     <Route path="*" element={<NotFound />}/>
                 </Route>
+                <Route path="/project/:id" element={<ProjectDetails />}/>
             </Routes>
             <Footer />
         </div>
