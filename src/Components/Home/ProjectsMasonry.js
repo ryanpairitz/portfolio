@@ -11,6 +11,7 @@ function useMedia(queries, values, defaultValue) {
         const handler = () => setValue(match);
         window.addEventListener('resize', handler);
         return () => window.removeEventListener('resize', handler);
+        // eslint-disable-next-line
     }, []);
     return value;
 }

@@ -13,7 +13,6 @@ const ProjectCard = ({ project }) => {
     const [hovering, setHovering] = useState(false);
     const cardStyle = useSpring({
         to: {
-            // opacity: hovering ? 1 : 0.618,
             scale: hovering ? 1.0557 : 1,
         },
     });
@@ -43,7 +42,7 @@ const ProjectCard = ({ project }) => {
                 anim.current?.destroy();
             }
         }
-    }, []);
+    }, [animationData]);
     useEffect(() => {
         anim.current?.setDirection(hovering ? 1 : -1);
         anim.current?.play();

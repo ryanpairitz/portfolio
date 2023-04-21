@@ -226,7 +226,7 @@ nav {
 
 .view-container {
   min-height: 61.8vh;
-  padding: 1.618rem calc((152rem / 34) - 0.5rem) 2.618rem calc((152rem / 34) - 0.5rem);
+  padding: 1.618rem calc((152rem / 34) - 0.5rem) calc(144rem / 34);
   background: linear-gradient(var(--forest), var(--forest), var(--spruce));
   /* background: var(--spruce); */
   border-bottom-left-radius: calc(44.5rem / 34);
@@ -235,7 +235,7 @@ nav {
 
 .view-container-alt {
   background: var(--spruce);
-  padding: 1.618rem calc(152rem / 34) 2.618rem calc(152rem / 34);
+  padding: 1.618rem calc(152rem / 34) 2.618rem;
 }
 
 /* .project-container {

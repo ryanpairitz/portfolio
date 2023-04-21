@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ReactComponent as EmailIcon } from '../img/icons_email.svg';
 import { useSpring, animated, useTransition, useSpringRef, useChain } from "@react-spring/web";
 import useMeasure from "react-use-measure";
 import './Contact.css';
