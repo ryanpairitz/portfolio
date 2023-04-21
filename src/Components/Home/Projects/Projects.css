@@ -1,0 +1,103 @@
+.list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.list,
+.list:after,
+.list:before,
+.list *,
+.list *:after,
+.list *:before {
+  box-sizing: border-box;
+}
+
+.list > div {
+    position: absolute;
+    will-change: transform, width, height, opacity;
+    padding: 0.5rem;
+}
+
+.list > div > a {
+    position: relative;
+    display: block;
+    /* background-color: var(--spruce); */
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: calc(17rem / 34);
+    box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* display: block; */
+    /* top: 50%;
+    transform: translateY(-50%); */
+    /* display: contents; */
+    /* opacity: 0.382; */
+}
+.card-img > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: unset !important; /* so lottie animations don't appear blurry on Chrome */
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.618rem;
+    gap: 0.618rem
+}
+
+.card-content > .logo {
+    /* order: 1; */
+    display: block;
+    line-height: 0;
+}
+
+.card-content > .logo > svg {
+    height: 1rem;
+}
+.card-content > .logo > svg#the-shirt, svg#vinal {
+    height: 1.618rem;
+}
+
+.card-title {
+    font-size: calc(55rem / 34);
+    line-height: 1em;
+    text-align: right;
+    order: 1;
+    min-width: min-content;
+}
+
+.tags {
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    list-style: none;
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+    /* margin: 0.618rem; */
+    font-size: calc(16rem / 34);
+    gap: calc(8em / 16);
+}
+
+.tags > li {
+    font-style: italic;
+    font-weight: 500;
+    width: max-content;
+    padding: calc(3em / 16) calc(8em / 16);
+    border-radius: calc(10.5em / 16);
+}

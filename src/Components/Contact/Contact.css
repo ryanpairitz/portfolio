@@ -1,0 +1,41 @@
+.line-container {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    gap: calc(21rem / 34);
+    background-color: var(--forest);
+    padding: calc(21rem / 34) 1rem;
+    border-radius: calc(13rem / 34);
+    will-change: contents;
+}
+
+.button {
+    /* background: rgba(221,70,35,0.382); */
+    background-color: var(--green-parakeet);
+    color: var(--cool-neutral);
+    fill: var(--cool-neutral);
+    padding: 0 calc(17rem / 34);
+    height: 1.618rem;
+    display: flex;
+    align-items: center;
+    gap: calc(8rem / 34);
+    border-radius: calc(8rem / 34);
+}
+
+.button-text {
+    color: inherit;
+    font-size: calc(21rem / 34);
+    margin: 0;
+    padding: 0;
+    padding-right: calc(8rem / 34);
+}
+
+.email-icon {
+    fill: inherit;
+    display: block;
+    flex: 0 0 calc(21rem / 34);
+}
