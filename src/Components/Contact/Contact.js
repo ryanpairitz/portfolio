@@ -1,6 +1,6 @@
 import EmailButton from "./EmailButton";
 import "./Contact.css";
-import AnimatedP from "../Home/About/AnimatedP";
+import AnimatedP from "../AnimatedP";
 
 const Contact = () => {
     return (

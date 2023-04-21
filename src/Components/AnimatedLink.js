@@ -1,7 +1,7 @@
 import { Children, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { animated, useTrail, useSpring } from "@react-spring/web";
-import AnimatedButton from '../Home/AnimatedButton';
+import AnimatedButton from './AnimatedButton';
 import './Link.css';
 
 const AnimatedLink = ({ to, href, hasManyTypes, children }) => {

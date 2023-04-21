@@ -1,4 +1,4 @@
-import AnimatedButton from "./AnimatedButton";
+import AnimatedButton from "../../AnimatedButton";
 
 const FilterList = [
     "graphic-design",

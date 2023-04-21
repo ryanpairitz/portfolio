@@ -1,4 +1,4 @@
-import AnimatedButton from "./Home/AnimatedButton";
+import AnimatedButton from "./AnimatedButton";
 
 const Footer = () => {
     const scrollToTop = () => {

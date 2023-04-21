@@ -5,8 +5,8 @@ import {
 import Footer from "./Footer";
 import About from "./Home/About/About";
 import Home from "./Home/Home";
-import ProjectDetails from "./Home/ProjectDetails";
-import Projects from "./Home/Projects";
+import ProjectDetails from "./Home/Projects/ProjectDetails";
+import Projects from "./Home/Projects/Projects";
 import NotFound from "./NotFound";
 
 const Components = () => {

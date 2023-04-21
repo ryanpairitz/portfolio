@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import AnimatedButton from "./AnimatedButton";
+import AnimatedButton from "../../AnimatedButton";
 
 const AnimatedNavLink = ({ to, children }) => {
     const [active, setActive] = useState(false);

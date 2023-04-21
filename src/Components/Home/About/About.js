@@ -1,9 +1,9 @@
 import Contact from "../../Contact/Contact";
-import AnimatedLink from "../../Links/AnimatedLink";
+import AnimatedLink from "../../AnimatedLink";
 import "./About.css";
 import IconInstagram from "../../img/IconInstagram";
 import IllustrationParrot from "./IllustrationParrot";
-import AnimatedP from "./AnimatedP";
+import AnimatedP from "../../AnimatedP";
 
 const NoWrap = (props) => <span style={{ whiteSpace: "nowrap" }} {...props} />
 const About = () => {

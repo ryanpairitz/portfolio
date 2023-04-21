@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Header from "./Header";
+import Header from "./Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
-import Brandmark from "./Brandmark";
-import Logotype from "./Logotype";
+import Brandmark from "../Nav/Brandmark";
+import Logotype from "../Nav/Logotype";
 import { animated, useSpring } from "@react-spring/web";
-import SocialsList from "./SocialsList";
+import SocialsList from "../Nav/SocialsList";
 
 const initFilters = {
     frontenddev: false,
