@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
-import Brandmark from "../Nav/Brandmark";
-import Logotype from "../Nav/Logotype";
-import { animated, useSpring } from "@react-spring/web";
-import SocialsList from "../Nav/SocialsList";
 
 const initFilters = {
     frontenddev: false,
@@ -14,16 +10,9 @@ const initFilters = {
 };
 
 const Home = () => {
-    const scalar = 1.0557;
     const location = useLocation();
     const [filters, setFilters] = useState(initFilters);
     const [filterList, setFilterList] = useState([]);
-    const [hovering, setHovering] = useState(false);
-    const logoStyle = useSpring({
-        to: {
-            scale: hovering ? scalar : 1
-        }
-    });
     useEffect(() => {
         const tempFilterList = Object.keys(filters).filter(
             filter => filters[filter]
@@ -47,25 +36,8 @@ const Home = () => {
         })
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    };
-
     return (
         <div>
-            <animated.div className="logo-container"
-                onMouseEnter={() => setHovering(!hovering)}
-                onMouseLeave={() => setHovering(false)}
-                onClick={scrollToTop}
-                style={logoStyle}>
-                <Brandmark className="brandmark" />
-                <Logotype className="logotype" />
-            </animated.div>
-            <SocialsList />
             <div className={location.pathname === "/about" ? "header-wrapper" : undefined}>
                 <Header filters={filters} onClickHandler={onClickHandler} />
             </div>

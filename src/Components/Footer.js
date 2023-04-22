@@ -1,6 +1,8 @@
+import { useLocation } from "react-router-dom";
 import AnimatedButton from "./AnimatedButton";
 
 const Footer = () => {
+    const { state } = useLocation();
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -9,7 +11,9 @@ const Footer = () => {
         });
     };
     return (
-        <div className="footer">
+        <div className="footer" style={{
+            backgroundColor: state?.theme.raisedNeutral
+        }}>
             <p>
                 Copyright &copy; 2022&nbsp;
                 <AnimatedButton onClickHandler={scrollToTop}
