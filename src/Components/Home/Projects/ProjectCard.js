@@ -51,6 +51,7 @@ const ProjectCard = ({ project }) => {
     return (
         <AnimatedLink
             to={`/project/${project.id}`}
+            state={{ theme: project.theme }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             style={{

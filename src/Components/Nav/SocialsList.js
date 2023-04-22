@@ -1,4 +1,7 @@
 import SocialIcon from "./SocialIcon";
+import { useLocation } from "react-router-dom";
+import { useSpring } from "@react-spring/web";
+import { useLayoutEffect, useState } from "react";
 
 const Socials = [
     {
@@ -24,10 +27,20 @@ const Socials = [
 ]
 
 const SocialsList = () => {
+    const location = useLocation();
+    const [isHome, setIsHome] = useState(true);
+    useLayoutEffect(() => {
+        setIsHome(!location.pathname.includes("project"));
+    }, [location]);
+    const style = useSpring({
+        to: {
+            fill: isHome ? "#155243" : location.state?.theme.primary
+        }
+    });
     return (
         <div className="icons-container">
             {Socials.map((item, index) => (
-                <SocialIcon item={item} className="icon" key={index} />
+                <SocialIcon item={item} className="icon" key={index} style={style}/>
             ))}
         </div>
     );

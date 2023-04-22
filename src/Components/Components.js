@@ -1,6 +1,7 @@
 import {
     Route,
-    Routes
+    Routes,
+    useLocation
 } from "react-router-dom";
 import Footer from "./Footer";
 import About from "./Home/About/About";
@@ -8,10 +9,15 @@ import Home from "./Home/Home";
 import ProjectDetails from "./Home/Projects/ProjectDetails";
 import Projects from "./Home/Projects/Projects";
 import NotFound from "./NotFound";
+import Nav from "./Nav/Nav";
 
 const Components = () => {
+    const { state } = useLocation();
     return (
-        <div className="App">
+        <div className="App" style={{
+            backgroundColor: state?.theme.neutral
+        }}>
+            <Nav />
             <Routes>
                 <Route path="/" element={<Home />}>
                     <Route index element={<Projects />}/>

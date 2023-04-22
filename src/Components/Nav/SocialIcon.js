@@ -39,7 +39,7 @@ function getPathById(id) {
     }
 }
 
-const SocialIcon = ({ item, className }) => {
+const SocialIcon = ({ item, className, style }) => {
     const path = getPathById(item.id);
     const [hovering, setHovering] = useState(false);
     const { scale, opacity } = useSpring({
@@ -57,12 +57,12 @@ const SocialIcon = ({ item, className }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            <animated.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 43 43"
-                className={className}>
+                className={className} style={style}>
                 <animated.circle style={{ opacity: opacity }} cx="21.5" cy="21.5" r="21" />
                 {path}
-            </svg>
+            </animated.svg>
         </animated.a>
     );
 };
