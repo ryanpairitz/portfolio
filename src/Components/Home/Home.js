@@ -9,9 +9,8 @@ const initFilters = {
     animation: false
 };
 
-const Home = () => {
+const Home = ({ filters, onClickHandler }) => {
     const location = useLocation();
-    const [filters, setFilters] = useState(initFilters);
     const [filterList, setFilterList] = useState([]);
     useEffect(() => {
         const tempFilterList = Object.keys(filters).filter(
@@ -24,17 +23,6 @@ const Home = () => {
         });
         setFilterList(tempFilterList);
     }, [filters]);
-
-    const onClickHandler = (e) => {
-        // toggle the selected filter
-        setFilters({
-            ...filters,
-            [e.currentTarget.id]: !filters[e.currentTarget.id]
-            // must use currentTarget vs. target, so if any child
-            // of the filter buttons are clicked (including the underline),
-            // the associated filter will be set/unset
-        })
-    };
 
     return (
         <div>
