@@ -10,7 +10,9 @@ const ProjectDetails = () => {
     // console.log(project.title)
 
     return (
-        <div>
+        <div className="details-container" style={{
+            backgroundColor: project.theme.neutral
+        }}>
             {project.title}
         </div>
     );

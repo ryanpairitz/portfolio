@@ -22,7 +22,6 @@
 .list > div > a {
     position: relative;
     display: block;
-    /* background-color: var(--spruce); */
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -36,11 +35,6 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    /* display: block; */
-    /* top: 50%;
-    transform: translateY(-50%); */
-    /* display: contents; */
-    /* opacity: 0.382; */
 }
 .card-img > svg {
     display: block;
@@ -62,7 +56,6 @@
 }
 
 .card-content > .logo {
-    /* order: 1; */
     display: block;
     line-height: 0;
 }
@@ -83,13 +76,9 @@
 }
 
 .tags {
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
     list-style: none;
     display: flex;
     flex-flow: row-reverse wrap-reverse;
-    /* margin: 0.618rem; */
     font-size: calc(16rem / 34);
     gap: calc(8em / 16);
 }
@@ -100,4 +89,10 @@
     width: max-content;
     padding: calc(3em / 16) calc(8em / 16);
     border-radius: calc(10.5em / 16);
+}
+
+.details-container {
+    min-height: calc(100vh - (89rem / 34));
+    border-bottom-left-radius: calc(44.5rem / 34);
+    border-bottom-right-radius: calc(44.5rem / 34);
 }

@@ -25,7 +25,7 @@ const Home = ({ filters, onClickHandler }) => {
     }, [filters]);
 
     return (
-        <div>
+        <div className="content">
             <div className={location.pathname === "/about" ? "header-wrapper" : undefined}>
                 <Header filters={filters} onClickHandler={onClickHandler} />
             </div>

@@ -4,6 +4,16 @@
   background-color: var(--forest);
 }
 
+.App {
+  /* position: relative; */
+  min-height: 100vh;
+}
+
+.App * {
+  box-sizing: border-box;
+
+}
+
 h1, h2, h3 {
   font-weight: 500;
   margin: 0;
@@ -140,6 +150,9 @@ nav {
 }
 
 .footer {
+  /* position: absolute; */
+  width: 100%;
+  bottom: 0;
   height: 2.618rem;
   display: flex;
   flex-direction: column;
@@ -225,7 +238,8 @@ nav {
 }
 
 .view-container {
-  min-height: 61.8vh;
+  /* min-height: 61.8vh; */
+  /* box-sizing: border-box; */
   padding: 1.618rem calc((152rem / 34) - 0.5rem) calc(144rem / 34);
   background: linear-gradient(var(--forest), var(--forest), var(--spruce));
   /* background: var(--spruce); */
@@ -238,7 +252,12 @@ nav {
   padding: 1.618rem calc(152rem / 34) 2.618rem;
 }
 
-/* .project-container {
+/* .content, .content > div {
+  box-sizing: border-box;
+
+} */
+
+/* .projects-container {
   box-sizing: border-box;
 
 } */

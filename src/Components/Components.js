@@ -10,7 +10,7 @@ import ProjectDetails from "./Home/Projects/ProjectDetails";
 import Projects from "./Home/Projects/Projects";
 import NotFound from "./NotFound";
 import Nav from "./Nav/Nav";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 const initFilters = {
     frontenddev: false,
@@ -32,9 +32,13 @@ const Components = () => {
             // the associated filter will be set/unset
         })
     };
+    useLayoutEffect(() => {
+        document.body.style.backgroundColor = state?.theme.raisedNeutral ? state?.theme.raisedNeutral : "#001412"; 
+    },[state]);
+    
     return (
         <div className="App" style={{
-            backgroundColor: state?.theme.neutral
+            backgroundColor: state?.theme.raisedNeutral
         }}>
             <Nav />
             <Routes>

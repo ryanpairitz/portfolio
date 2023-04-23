@@ -13,11 +13,14 @@
 html, body {
   font-size: 30.6px;
   color: var(--cool-neutral);
-  background-color: var(--forest);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   /* -webkit-tap-highlight-color: rgba(0,0,0,0.05); */
+}
+
+body {
+  background-color: var(--forest);
 }
 
 ul {
