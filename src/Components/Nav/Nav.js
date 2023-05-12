@@ -35,10 +35,12 @@ const Nav = () => {
     // to then search for that project's details based on the id
 
     // https://reactrouter.com/en/main/hooks/use-loader-data
-    const {fill,...logoStyle} = useSpring({
+    const { fill, accentFill, opacity, ...logoStyle } = useSpring({
         to: {
             scale: hovering ? scalar : 1,
-            fill: isHome ? "#155243" : location.state?.theme.primary
+            fill: isHome ? "#155243" : location.state?.theme.primary,
+            accentFill: isHome ? "#0c7a6e" : location.state?.theme.primary,
+            opacity: isHome ? 0.62 : 0.38,
         }
     });
     const transition = useTransition(isHome, {
@@ -79,11 +81,16 @@ const Nav = () => {
                 onMouseLeave={() => setHovering(false)}
                 onClick={scrollToTop}
                 style={logoStyle}>
-                <Brandmark className="brandmark" style={{fill: fill}} />
+                <Brandmark className="brandmark"
+                    style={{ 
+                        fill: fill,
+                        opacity: opacity,
+                    }}
+                    accentStyle={{ fill: accentFill }} />
                 {transition((style, content) => (
                     content &&
                     <animated.div style={style}>
-                        <Logotype className="logotype" style={{fill: fill}} />
+                        <Logotype className="logotype" style={{ fill: fill }} />
                     </animated.div>
                 ))}
             </animated.div>
