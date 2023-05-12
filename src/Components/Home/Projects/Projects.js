@@ -32,7 +32,6 @@ export const ProjectList = [
 			neutral: "#0c1f1f", // to be used in background
 			raisedNeutral: "#011211", // to be used as background accent, like as bg for call to action	
 			primary: "#00dbb5", // to be used most often, like greenparakeet color, in calls to action + links
-			accent: ""
 		},
         bannerImg: "",
         timeline: {
@@ -65,7 +64,6 @@ export const ProjectList = [
 			neutral: "#010a12",
 			raisedNeutral: "#0b131c",
 			primary: "#9b5f17",
-			accent: ""
 		},
     },
     {
@@ -88,7 +86,6 @@ export const ProjectList = [
 			neutral: "#272727",
 			raisedNeutral: "#161616",
 			primary: "#df195d",
-			accent: ""
 		},
     },
     {

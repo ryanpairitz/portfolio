@@ -4,7 +4,7 @@ import { animated, useTrail, useSpring } from "@react-spring/web";
 import AnimatedButton from './AnimatedButton';
 import './Link.css';
 
-const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
+const AnimatedLink = ({ to, href, hasManyTypes, children, state }) => {
     const items = (hasManyTypes ? Children.toArray(children) :
         children.split("").map((value, index) => (
             { key: index, char: value }
@@ -63,6 +63,7 @@ const AnimatedLink = ({ to, href, hasManyTypes, children }) => {
                         onMouseLeave={() => setActive(false)}
                         className="link-text"
                         to={to}
+                        state={state}
                     >
                         {hasManyTypes ?
                             trail.map((style, index) => (

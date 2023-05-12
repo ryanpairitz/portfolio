@@ -12,7 +12,9 @@ export const ProjectList = {
         role: "The Shirt Designer",
         timeframe: "September 2019 - April 2020",
         tags: [
-            "graphic design",
+			"graphic design",
+			"ui/ux design",
+			"frontend dev",
         ],
 		theme: {
 			neutral: "#0c1f1f",

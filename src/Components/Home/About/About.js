@@ -29,20 +29,38 @@ const About = () => {
                     </AnimatedP>
                     <AnimatedP>
                         A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
-                        <AnimatedLink to="/project/1">
+                        <AnimatedLink to="/project/1" state={{
+                            theme: {
+                                neutral: "#010a12",
+                                raisedNeutral: "#0b131c",
+                                primary: "#9b5f17",
+                            }
+                        }}>
                             The Shirt
                         </AnimatedLink> — the highest-selling piece of collegiate apparel in the nation.
                     </AnimatedP>
                     <AnimatedP>
                         I have designed and developed multiple apps for web or mobile. One of which,&nbsp;
                         <NoWrap>
-                            <AnimatedLink to="/project/3">
+                            <AnimatedLink to="/project/3" state={{
+                                theme: {
+                                    neutral: "#1c1821",
+                                    raisedNeutral: "#0d0d1a",
+                                    primary: "#9bd2f2",
+                                }
+                            }}>
                                 Partake
                             </AnimatedLink>
                             ,</NoWrap>
                         &nbsp;was granted an award by the University of Notre Dame. Another app,&nbsp;
                         <NoWrap>
-                            <AnimatedLink to="/project/0">
+                            <AnimatedLink to="/project/0" state={{
+                                theme: {
+                                    neutral: "#0c1f1f",
+                                    raisedNeutral: "#011211",
+                                    primary: "#00dbb5",
+                                }
+                            }}>
                                 ivi
                             </AnimatedLink>
                             ,</NoWrap>
