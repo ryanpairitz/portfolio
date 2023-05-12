@@ -14,7 +14,6 @@
 }
 
 .button {
-    /* background: rgba(221,70,35,0.382); */
     background-color: var(--green-parakeet);
     color: var(--cool-neutral);
     fill: var(--cool-neutral);
@@ -24,6 +23,7 @@
     align-items: center;
     gap: calc(8rem / 34);
     border-radius: calc(8rem / 34);
+    box-sizing: content-box !important;
 }
 
 .button-text {
