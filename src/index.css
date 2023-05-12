@@ -26,16 +26,3 @@ body {
 ul {
   padding: 0;
 }
-
-::selection {
-  background: rgba(221,70,35,0.382);
-}
-
-::-webkit-selection {
-  background: rgba(221,70,35,0.382);
-}
-
-::-moz-selection {
-  background: rgba(221,70,35,0.382);
-}
-

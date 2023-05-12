@@ -33,9 +33,23 @@ const Components = () => {
         })
     };
     useLayoutEffect(() => {
-        document.body.style.backgroundColor = state?.theme.raisedNeutral ? state?.theme.raisedNeutral : "#001412"; 
-    },[state]);
-    
+        // update background color to match theme
+        document.body.style.backgroundColor = state?.theme.raisedNeutral ? state?.theme.raisedNeutral : "#001412";
+        // update text highlight color to match theme
+        var highlightColor = state?.theme.primary ? state?.theme.primary : "rgba(221,70,35,0.382)";
+        var css = '::selection { background: ' + highlightColor + '; } ::-webkit-selection { background: ' + highlightColor + '; } ::-moz-selection { background: ' + highlightColor + '; }',
+            head = document.head || document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+
+        if (style.styleSheet) {
+            // This is required for IE8 and below.
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+        head.appendChild(style);
+    }, [state]);
+
     return (
         <div className="App" style={{
             backgroundColor: state?.theme.raisedNeutral
