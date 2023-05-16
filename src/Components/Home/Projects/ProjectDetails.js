@@ -9,7 +9,7 @@ export const ProjectList = {
     0: {
         coverImg: <img src={CoverIvi}/>,
         title: "ivi",
-        role: "The Shirt Designer",
+        role: "CEO, CTO, Director of Branding",
         timeframe: "September 2019 - April 2020",
         tags: [
 			"graphic design",
@@ -39,7 +39,7 @@ export const ProjectList = {
     2: {
         coverImg: <img src={CoverVinal}/>,
         title: "Vinal",
-        role: "Graphic & UI/UX Designer, Frontend Developer",
+        role: "UI/UX Designer & Developer, Director of Branding",
         timeframe: "December 2022 - present",
 		tags: [
 			"graphic design",

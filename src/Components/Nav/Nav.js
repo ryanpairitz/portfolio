@@ -3,6 +3,7 @@ import { useLayoutEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Brandmark from "./Brandmark";
 import Logotype from "./Logotype";
+import NavWrapper from "./NavWrapper";
 import SocialsList from "./SocialsList";
 
 const Nav = () => {
@@ -35,6 +36,17 @@ const Nav = () => {
     // to then search for that project's details based on the id
 
     // https://reactrouter.com/en/main/hooks/use-loader-data
+    const [condense, setCondense] = useState(false);
+    const [windowSize, setWindowSize] = useState(getWindowSize);
+    useLayoutEffect(() => {
+        const handleResize = () => setWindowSize(getWindowSize);
+        window.addEventListener('resize', handleResize);
+        return () =>
+            window.removeEventListener('resize', handleResize);
+    });
+    useLayoutEffect(() => {
+        setCondense(windowSize.innerWidth < 624);
+    }, [windowSize]);
     const { fill, accentFill, opacity, ...logoStyle } = useSpring({
         to: {
             scale: hovering ? scalar : 1,
@@ -72,9 +84,9 @@ const Nav = () => {
             navigate(-1);
         }
     };
-    // TODO: instead of empty tag, wrap in NavWrapper, which is a div when on mobile
+
     return (
-        <>
+        <NavWrapper condense={condense}>
             <animated.div
                 className="logo-container"
                 onMouseEnter={() => setHovering(true)}
@@ -82,12 +94,12 @@ const Nav = () => {
                 onClick={scrollToTop}
                 style={logoStyle}>
                 <Brandmark className="brandmark"
-                    style={{ 
+                    style={{
                         fill: fill,
                         opacity: opacity,
                     }}
                     accentStyle={{ fill: accentFill }} />
-                {transition((style, content) => (
+                {!condense && transition((style, content) => (
                     content &&
                     <animated.div style={style}>
                         <Logotype className="logotype" style={{ fill: fill }} />
@@ -95,8 +107,13 @@ const Nav = () => {
                 ))}
             </animated.div>
             <SocialsList />
-        </>
+        </NavWrapper>
     );
 };
+
+const getWindowSize = () => {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+}
 
 export default Nav;

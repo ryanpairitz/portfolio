@@ -25,7 +25,7 @@ const About = () => {
                                 <b>&#41;</b>
                             </AnimatedLink>
                             ,</NoWrap>
-                        &nbsp;a designer, developer, and animator. I specialize in user experience, frontend development, and design, and I have been doing freelance work since I was 14.
+                        &nbsp;a designer, software developer, and animator. I specialize in user experience, frontend development, and design, and I have been doing freelance work since I was 14.
                     </AnimatedP>
                     <AnimatedP>
                         A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
