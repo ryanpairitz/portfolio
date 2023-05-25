@@ -56,3 +56,9 @@
         display: inline;
     }
 }
+@media screen and (max-width: 661px) {
+  .about-container p,
+  .tab-container * {
+    font-size: 0.77rem;
+  }
+}

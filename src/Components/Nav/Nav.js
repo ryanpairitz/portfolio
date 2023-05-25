@@ -45,7 +45,7 @@ const Nav = () => {
             window.removeEventListener('resize', handleResize);
     });
     useLayoutEffect(() => {
-        setCondense(windowSize.innerWidth < 624);
+        setCondense(windowSize.innerWidth <= 624);
     }, [windowSize]);
     const { fill, accentFill, opacity, ...logoStyle } = useSpring({
         to: {
@@ -86,7 +86,7 @@ const Nav = () => {
     };
 
     return (
-        <NavWrapper condense={condense}>
+        <NavWrapper condense={condense} isHome={isHome}>
             <animated.div
                 className="logo-container"
                 onMouseEnter={() => setHovering(true)}

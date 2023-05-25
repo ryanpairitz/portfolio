@@ -160,8 +160,22 @@
     margin: calc(21em / 16);
 }
 
+@media screen and (max-width: 624px) {
+    .details-container {
+        font-size: calc(26px * 0.9);
+        padding: 61.19px 1.618rem calc(144rem / 34);
+    }
+    .cover-container {
+        height: calc(377rem / 34);
+        border-radius: calc(22.5rem / 34);
+    }
+}
+
 @media screen and (max-width: 480px) {
     .list > div {
         padding: calc(0.5em * 0.618);
+    }
+    .details-container {
+        padding: 61.19px calc(21rem / 34) calc(144rem / 34);
     }
 }
