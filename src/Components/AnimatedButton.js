@@ -24,6 +24,12 @@ const AnimatedButton = ({ id, className, active, onClickHandler, to,
     useLayoutEffect(() => {
         setWidth(ref.current.getBoundingClientRect().width);
     },[]);
+    useLayoutEffect(() => {
+        const handleResize = () => setWidth(ref.current.getBoundingClientRect().width);
+        window.addEventListener('resize', handleResize);
+        return () =>
+            window.removeEventListener('resize', handleResize);
+    });
     if (!className) className = "";
 
     return (

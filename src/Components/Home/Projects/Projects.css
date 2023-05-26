@@ -169,6 +169,16 @@
         height: calc(377rem / 34);
         border-radius: calc(22.5rem / 34);
     }
+    .cover-content {
+        padding: 1.618em 0.618em 0.618em;
+        gap: 0.618em;
+    }
+    .tags {
+        font-size: calc(13px * 0.9);
+    }
+    .details-container > .tags {
+        margin: calc(13em / 16);
+    }
 }
 
 @media screen and (max-width: 480px) {

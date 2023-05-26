@@ -28,10 +28,15 @@
 
 .button-text {
     color: inherit;
-    font-size: calc(21rem / 34);
+    font-size: 1em;
     margin: 0;
     padding: 0;
     padding-right: calc(8rem / 34);
+    line-height: 1em;
+}
+
+.button-text * {
+    font-size: 0.618em !important;
 }
 
 .email-icon {

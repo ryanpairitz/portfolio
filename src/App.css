@@ -76,7 +76,7 @@ a,
 .nav-wrapper-content {
   width: 100%;
   position: relative;
-  padding: calc(13px * 0.9) calc(21px * 0.9);
+  padding: calc(13px * 0.9) calc(13px * 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,6 +199,7 @@ nav {
   justify-content: flex-end;
   background-color: var(--spruce);
   height: 76.39vh;
+  min-height: calc(466px * 0.9);
   width: 100%;
   border-bottom-left-radius: calc(44.5rem / 34);
   border-bottom-right-radius: calc(44.5rem / 34);
@@ -379,6 +380,10 @@ nav {
   }
   .view-container-alt {
     padding: 1.618rem calc(55rem / 34) 2.618rem;
+  }
+  .header-container {
+    border-bottom-left-radius: calc(22.5rem / 34);
+    border-bottom-right-radius: calc(22.5rem / 34);
   }
 }
 @media screen and (max-width: 527px) {
