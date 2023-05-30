@@ -11,6 +11,7 @@ import Projects from "./Home/Projects/Projects";
 import NotFound from "./NotFound";
 import Nav from "./Nav/Nav";
 import { useLayoutEffect, useState } from "react";
+import ScrollReset from "./ScrollReset";
 
 const initFilters = {
     frontenddev: false,
@@ -54,6 +55,7 @@ const Components = () => {
         <div className="App" style={{
             backgroundColor: state?.theme.raisedNeutral
         }}>
+            <ScrollReset />
             <Nav />
             <Routes>
                 <Route path="/" element={<Home
