@@ -160,6 +160,13 @@
     margin: calc(21em / 16);
 }
 
+@media screen and (max-width: 669px) {
+    .cover-content {
+        padding: 1.618em 0.618em 0.618em;
+        gap: 0.618em;
+    }
+}
+
 @media screen and (max-width: 624px) {
     .details-container {
         font-size: calc(26px * 0.9);

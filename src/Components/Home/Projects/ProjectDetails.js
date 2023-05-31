@@ -9,8 +9,8 @@ export const ProjectList = {
     0: {
         coverImg: <img src={CoverIvi}/>,
         title: "ivi",
-        role: "CEO, CTO, Director of Branding",
-        timeframe: "September 2019 - April 2020",
+        role: "Co-Founder, Product Designer, Developer",
+        timeframe: "July 2021 - August 2022",
         tags: [
 			"graphic design",
 			"ui/ux design",

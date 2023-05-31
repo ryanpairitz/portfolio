@@ -39,17 +39,18 @@ function getPathById(id) {
     }
 }
 
-const SocialIcon = ({ item, className, style }) => {
+const SocialIcon = ({ item, className, isHome, style }) => {
     const path = getPathById(item.id);
     const [hovering, setHovering] = useState(false);
-    const { scale, opacity } = useSpring({
+    const { scale, opacity, circleOpacity } = useSpring({
         scale: hovering ? 1.0557 : 1,
-        opacity: hovering ? 0.382 : 0.15,
+        opacity: isHome || hovering ? 1 : 0.77,
+        circleOpacity: hovering ? 0.382 : 0.15,
     });
 
     return (
         path &&
-        <animated.a 
+        <animated.a
             href={item.href}
             style={{ scale: scale }}
             onMouseEnter={() => setHovering(true)}
@@ -59,8 +60,11 @@ const SocialIcon = ({ item, className, style }) => {
             className="icon-container">
             <animated.svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 43 43"
-                className={className} style={style}>
-                <animated.circle style={{ opacity: opacity }} cx="21.5" cy="21.5" r="21" />
+                className={className} style={{
+                    ...style,
+                    opacity: opacity,
+                }}>
+                <animated.circle style={{ opacity: circleOpacity }} cx="21.5" cy="21.5" r="21" />
                 {path}
             </animated.svg>
         </animated.a>

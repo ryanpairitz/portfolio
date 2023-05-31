@@ -1,23 +1,40 @@
-import { useLocation } from "react-router-dom";
+import { useLayoutEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import AnimatedButton from "./AnimatedButton";
 
 const Footer = () => {
-    const { state } = useLocation();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [isHome, setIsHome] = useState(true);
+    const [isDefault, setIsDefault] = useState(true);
+    useLayoutEffect(() => {
+        setIsHome(!location.pathname.includes("project"));
+        setIsDefault(location.key === "default");
+    }, [location]);
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+        if (isHome) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+        else if (isDefault) {
+            navigate("/");
+        }
+        else {
+            navigate(-1);
+        }
     };
     return (
         <div className="footer" style={{
-            backgroundColor: state?.theme.raisedNeutral
+            backgroundColor: location.state?.theme.raisedNeutral,
+            color: !isHome && "white"
         }}>
             <p>
-                Copyright &copy; 2022&nbsp;
+                Copyright &copy; 2023&nbsp;
                 <AnimatedButton onClickHandler={scrollToTop}
-                    useSwatches={true}>
+                    useSwatches={isHome} defaultUnderlineColor={location.state?.theme.primary} >
                 <strong>
                     Ryan Pairitz
                 </strong>

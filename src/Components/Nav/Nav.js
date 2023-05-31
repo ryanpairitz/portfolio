@@ -47,12 +47,13 @@ const Nav = () => {
     useLayoutEffect(() => {
         setCondense(windowSize.innerWidth <= 624);
     }, [windowSize]);
-    const { fill, accentFill, opacity, ...logoStyle } = useSpring({
+    const { fill, accentFill, accentOpacity, opacity, ...logoStyle } = useSpring({
         to: {
             scale: hovering ? scalar : 1,
             fill: isHome ? "#155243" : location.state?.theme.primary,
             accentFill: isHome ? "#0c7a6e" : location.state?.theme.primary,
-            opacity: isHome ? 0.62 : 0.38,
+            accentOpacity: hovering && !isHome ? 1 : 0.62,
+            opacity: isHome || hovering ? 0.62 : 0.38,
         }
     });
     const transition = useTransition(isHome, {
@@ -68,7 +69,7 @@ const Nav = () => {
             opacity: 0,
             x: -144,
         },
-    })
+    });
     const scrollToTop = () => {
         if (isHome) {
             window.scrollTo({
@@ -98,7 +99,10 @@ const Nav = () => {
                         fill: fill,
                         opacity: opacity,
                     }}
-                    accentStyle={{ fill: accentFill }} />
+                    accentStyle={{ 
+                        fill: accentFill,
+                        opacity: accentOpacity,
+                    }} />
                 {!condense && transition((style, content) => (
                     content &&
                     <animated.div style={style}>
@@ -106,7 +110,7 @@ const Nav = () => {
                     </animated.div>
                 ))}
             </animated.div>
-            <SocialsList />
+            <SocialsList isHome={isHome} />
         </NavWrapper>
     );
 };
