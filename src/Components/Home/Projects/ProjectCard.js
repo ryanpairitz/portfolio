@@ -56,7 +56,7 @@ const ProjectCard = ({ project }) => {
             onMouseLeave={() => setHovering(false)}
             style={{
                 ...cardStyle,
-                backgroundColor: project.theme.raisedNeutral,
+                backgroundColor: project.id === 1 ? '#9B5F17' : project.theme.raisedNeutral,
             }}>
             <animated.div className="card-img" 
                 style={{

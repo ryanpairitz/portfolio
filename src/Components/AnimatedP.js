@@ -1,6 +1,6 @@
 import { useInView, animated } from '@react-spring/web';
 
-const AnimatedP = ({ className, children }) => {
+const AnimatedP = ({ className, style, children }) => {
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -18,7 +18,7 @@ const AnimatedP = ({ className, children }) => {
     }
   );
   return (
-    <animated.p ref={ref} style={springs} className={className}>
+    <animated.p ref={ref} style={{ ...style, ...springs }} className={className}>
       {children}
     </animated.p>
   );

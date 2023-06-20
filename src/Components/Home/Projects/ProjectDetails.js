@@ -4,6 +4,8 @@ import CoverPartake from "./CoverPartake.png";
 import CoverIvi from "./CoverIvi.png";
 import CoverVinal from "./CoverVinal.png";
 import ProjectTags from "./ProjectTags";
+import Contact from "../../Contact/Contact";
+import AnimatedP from "../../AnimatedP";
 
 export const ProjectList = {
     0: {
@@ -113,6 +115,10 @@ const ProjectDetails = () => {
             <ProjectTags tags={project.tags}
                 color={project.theme.primary}
                 backgroundColor={project.theme.raisedNeutral} />
+            <Contact />
+            <AnimatedP>
+                I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!
+            </AnimatedP>
         </div>
     );
 };

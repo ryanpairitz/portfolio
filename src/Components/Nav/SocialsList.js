@@ -25,18 +25,18 @@ const Socials = [
     },
 ]
 
-const SocialsList = ({ isHome }) => {
+const SocialsList = () => {
     const location = useLocation();
     const style = useSpring({
         to: {
-            fill: isHome ? "#155243" : location.state?.theme.primary
+            fill: location.state?.theme.primary ? location.state?.theme.primary : "#0c7a6e"
         }
     });
     return (
         <div className="icons-container">
             {Socials.map((item, index) => (
                 <SocialIcon item={item} className="icon" key={index}
-                    isHome={isHome} style={style} />
+                    style={style} />
             ))}
         </div>
     );

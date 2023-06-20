@@ -14,7 +14,7 @@ function convertRemToPixels(x) {
     return x * remValue / 34;
 }
 
-const EmailButton = () => {
+const EmailButton = ({ style }) => {
     const baseWidth = convertRemToPixels(21);
     const [ref, bounds] = useMeasure();
     const [showEmail, setShowEmail] = useState(false);
@@ -45,7 +45,7 @@ const EmailButton = () => {
             onMouseEnter={() => setShowEmail(true)}
             onMouseLeave={() => setShowEmail(false)}
             href={showEmail ? "mailto:ryn.pair@me.com" : "#"}
-            style={buttonStyles}
+            style={{ ...style, ...buttonStyles }}
         >
             <IconEmail width={baseWidth} className="email-icon"/>
             {showEmail &&

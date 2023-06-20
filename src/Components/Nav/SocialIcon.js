@@ -39,12 +39,12 @@ function getPathById(id) {
     }
 }
 
-const SocialIcon = ({ item, className, isHome, style }) => {
+const SocialIcon = ({ item, className, style }) => {
     const path = getPathById(item.id);
     const [hovering, setHovering] = useState(false);
     const { scale, opacity, circleOpacity } = useSpring({
         scale: hovering ? 1.0557 : 1,
-        opacity: isHome || hovering ? 1 : 0.77,
+        opacity: hovering ? 1 : 0.77,
         circleOpacity: hovering ? 0.382 : 0.15,
     });
 

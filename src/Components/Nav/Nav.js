@@ -50,10 +50,10 @@ const Nav = () => {
     const { fill, accentFill, accentOpacity, opacity, ...logoStyle } = useSpring({
         to: {
             scale: hovering ? scalar : 1,
-            fill: isHome ? "#155243" : location.state?.theme.primary,
+            fill: isHome ? "#0c7a6e" : location.state?.theme.primary,
             accentFill: isHome ? "#0c7a6e" : location.state?.theme.primary,
-            accentOpacity: hovering && !isHome ? 1 : 0.62,
-            opacity: isHome || hovering ? 0.62 : 0.38,
+            accentOpacity: hovering ? 1 : 0.62,
+            opacity: hovering ? 0.62 : 0.38,
         }
     });
     const transition = useTransition(isHome, {
@@ -106,11 +106,12 @@ const Nav = () => {
                 {!condense && transition((style, content) => (
                     content &&
                     <animated.div style={style}>
-                        <Logotype className="logotype" style={{ fill: fill }} />
+                        <Logotype className="logotype" 
+                            style={{ fill: fill, opacity: accentOpacity }} />
                     </animated.div>
                 ))}
             </animated.div>
-            <SocialsList isHome={isHome} />
+            <SocialsList />
         </NavWrapper>
     );
 };
