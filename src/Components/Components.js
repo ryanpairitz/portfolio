@@ -35,7 +35,7 @@ const Components = () => {
     };
     useLayoutEffect(() => {
         // update background color to match theme
-        document.body.style.backgroundColor = state?.theme.raisedNeutral ? state?.theme.raisedNeutral : "#001412";
+        document.body.style.backgroundColor = state?.theme.raisedNeutral ? state?.theme.raisedNeutral : "#0e1314";
         // update text highlight color to match theme
         var highlightColor = state?.theme.primary ? state?.theme.primary : "rgba(221,70,35,0.382)";
         var css = '::selection { background: ' + highlightColor + '; } ::-webkit-selection { background: ' + highlightColor + '; } ::-moz-selection { background: ' + highlightColor + '; }',

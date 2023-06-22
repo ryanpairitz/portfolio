@@ -6,9 +6,9 @@
 .line {
     display: flex;
     align-items: center;
-    gap: calc(21rem / 34);
+    gap: .618em;
     background-color: var(--forest);
-    padding: calc(21rem / 34) 1rem;
+    padding: .618rem 1rem;
     border-radius: calc(13rem / 34);
     will-change: contents;
 }
@@ -32,15 +32,24 @@
     margin: 0;
     padding: 0;
     padding-right: calc(8rem / 34);
-    line-height: 1em;
+    line-height: 0em;
 }
 
 .button-text * {
     font-size: 0.618em !important;
+    line-height: 1em;
 }
 
 .email-icon {
     fill: inherit;
     display: block;
     flex: 0 0 calc(21rem / 34);
+}
+
+@media screen and (max-width: 480px) {
+    .line {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.382em;
+    }
 }

@@ -54,7 +54,7 @@ a,
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* transform-origin: top; */
+  transform-origin: top;
 }
 
 .brandmark,
@@ -180,6 +180,7 @@ nav {
   font-weight: 300;
   color: var(--cool-neutral);
   background-color: var(--forest);
+  padding: calc(13rem / 34);
 }
 
 .footer>p {
@@ -354,6 +355,9 @@ nav {
   .filter {
     font-size: 1em;
   }
+  p {
+      font-size: 0.77rem;
+  }
 }
 @media screen and (max-width: 624px) {
   .logo-container {
@@ -393,13 +397,13 @@ nav {
 }
 @media screen and (max-width: 480px) {
   .hero {
-    margin: 0 calc(21rem / 34);
+    margin: 0 calc(13rem / 34);
   }
   .view-container {
-    padding: 1.618rem calc((21rem / 34) - (0.5rem * 0.618)) calc(144rem / 34);
+    padding: 1.618rem calc((13rem / 34) - (0.5rem * 0.618)) calc(144rem / 34);
   }
   .view-container-alt {
-    padding: 1.618rem calc(21rem / 34) 2.618rem;
+    padding: 1.618rem calc(13rem / 34) 2.618rem;
   }
 }
 @media screen and (max-width: 382px) {
