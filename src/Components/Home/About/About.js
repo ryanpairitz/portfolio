@@ -67,10 +67,7 @@ const About = () => {
                         &nbsp;earned a place in the 2022 Race to Revenue startup incubator cohort.
                     </AnimatedP>
                     <AnimatedP>
-                        When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or finding new crafts to get into. Or I'm betting on sports. &#40;Everyone has vices.&#41;
-                    </AnimatedP>
-                    <AnimatedP>
-                        I also have a lot of friends.
+                        When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or watching sports.
                     </AnimatedP>
                 </span>
             </div>

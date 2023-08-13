@@ -28,7 +28,7 @@ const Footer = () => {
     };
     return (
         <div className="footer" style={{
-            backgroundColor: location.state?.theme.raisedNeutral,
+            backgroundColor: !isHome && "#101111",
             color: !isHome && "white"
         }}>
             <p>

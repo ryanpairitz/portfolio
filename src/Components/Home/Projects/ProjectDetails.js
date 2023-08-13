@@ -79,7 +79,7 @@ const ProjectDetails = () => {
 
     return (
         <div className="details-container" style={{
-            backgroundColor: project.theme.neutral
+            backgroundColor: "#060707"
         }}>
             <div className="cover-container">
                 <div className="cover-img">
@@ -114,7 +114,7 @@ const ProjectDetails = () => {
             </div>
             <ProjectTags tags={project.tags}
                 color={project.theme.primary}
-                backgroundColor={project.theme.raisedNeutral} />
+                backgroundColor={"#101111"} />
             <Contact />
             <AnimatedP>
                 I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!

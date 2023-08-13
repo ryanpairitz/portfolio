@@ -13,7 +13,7 @@ const Socials = [
     },
     {
         id: "linkedin",
-        href: "https://www.linkedin.com/in/ryan-pairitz-462440222/",
+        href: "https://www.linkedin.com/in/ryanpairitz/",
     },
     {
         id: "tiktok",

@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div className="line-container">
             <AnimatedP className="line" style={{
-                backgroundColor: state?.theme.raisedNeutral && state?.theme.raisedNeutral
+                backgroundColor: state?.theme.raisedNeutral && "#101111"
             }}>
                 <b>Want to talk? Reach out:</b>
                 <EmailButton style={{

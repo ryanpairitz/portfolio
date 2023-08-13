@@ -9,7 +9,7 @@
     gap: .618em;
     background-color: var(--forest);
     padding: .618rem 1rem;
-    border-radius: calc(13rem / 34);
+    border-radius: calc(10.5rem / 34);
     will-change: contents;
 }
 
@@ -22,22 +22,19 @@
     display: flex;
     align-items: center;
     gap: calc(8rem / 34);
-    border-radius: calc(8rem / 34);
+    border-radius: calc(6.5rem / 34);
     box-sizing: content-box !important;
 }
 
 .button-text {
     color: inherit;
-    font-size: 1em;
     margin: 0;
     padding: 0;
     padding-right: calc(8rem / 34);
-    line-height: 0em;
 }
 
 .button-text * {
-    font-size: 0.618em !important;
-    line-height: 1em;
+    font-size: 0.77em !important;
 }
 
 .email-icon {

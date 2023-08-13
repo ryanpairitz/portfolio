@@ -4,9 +4,9 @@
   --sun-conure: #E2911B;
   --khaki: #EAD7A1;
   --scarlet: #DD4623;
-  --forest: #0e1314;
-  --spruce: #181c1c;
-  --green-parakeet: #155243;
+  --forest: #060707;
+  --spruce: #101111;
+  --green-parakeet: #1a6653;
   --cool-neutral: #F5F0D3;
 }
 
@@ -17,6 +17,10 @@ html, body {
   margin: 0;
   padding: 0;
   /* -webkit-tap-highlight-color: rgba(0,0,0,0.05); */
+}
+
+html * {
+  margin: 0;
 }
 
 body {

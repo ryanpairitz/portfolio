@@ -39,9 +39,9 @@ const AnimatedUnderline = ({ width, active, hovering,
                     </clipPath>
                     <g clipPath="url(#SVGID_00000044864584398808820940000010129106012025892265_)">
                         <rect fill="#F5F0D3" width={width * 0.6 / 3} height="100%" />
-                        <rect x={width * 0.6 / 3} fill="#001412" width={width * 0.6 / 3} height="100%" />
-                        <rect x={width * 0.6 / 3 * 2} fill="#0B1C18" width={width * 0.6 / 3} height="100%" />
-                        <rect x={width * 0.6} fill="#155243" width={width * 0.3 / 2} height="100%" />
+                        <rect x={width * 0.6 / 3} fill="#060707" width={width * 0.6 / 3} height="100%" />
+                        <rect x={width * 0.6 / 3 * 2} fill="#101111" width={width * 0.6 / 3} height="100%" />
+                        <rect x={width * 0.6} fill="#0C7A6E" width={width * 0.3 / 2} height="100%" />
                         <rect x={(width * 0.6) + (width * 0.3 / 2)} fill="#E2911B" width={width * 0.3 / 2} height="100%" />
                         <rect x={(width * 0.6) + (width * 0.3)} fill="#DD4623" width={width * 0.1 / 2} height="100%" />
                         <rect x={width - (width * 0.1 / 2)} fill="#EAD7A1" width={width * 0.1 / 2} height="100%" />
