@@ -28,7 +28,10 @@ export const ProjectList = {
             raisedNeutral: "#011211",
             primary: "#00dbb5",
         },
-        overview: "Say you're single, and — in a chance encounter — you think you've found the one. However, something comes up that prevents you from ever getting the person's information. There is no reliable solution by which users can easily recover missed connections, so the chances are that you will never see that person again. If only there were a way to offset this issue, to prevent you — and millions of others who have experienced this problem — from wondering, \"What if…?\""
+        overview: [
+            "Say you're single, and — in a chance encounter — you think you've found the one. However, something comes up that prevents you from ever getting the person's information. There is no reliable solution by which users can easily recover missed connections, so the chances are that you will never see that person again.",
+            "If only there were a way to offset this issue, to prevent you — and millions of others who have experienced this problem — from wondering, \"What if…?\"",
+        ],
     },
     1: {
         coverImg: <img src={CoverTheShirt} />,
@@ -47,7 +50,10 @@ export const ProjectList = {
             raisedNeutral: "#0b131c",
             primary: "#9b5f17",
         },
-        overview: "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities. With estimated sales around 165,000 units each year, it is the highest-selling article of collegiate apparel in the nation. \nThe stakes for The Shirt are greater than just sales, however. For Notre Dame students and fans, The Shirt is a pervasive symbol of the Notre Dame experience.",
+        overview: [
+            "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities. With estimated sales around 165,000 units each year, it is the highest-selling article of collegiate apparel in the nation.",
+            "The stakes for The Shirt are greater than just sales, however. For Notre Dame students and fans, The Shirt is a pervasive symbol of the Notre Dame experience.",
+        ],
     },
     2: {
         coverImg: <img src={CoverVinal} />,
@@ -66,7 +72,9 @@ export const ProjectList = {
             raisedNeutral: "#161616",
             primary: "#df195d",
         },
-        overview: "Collecting vinyl records is a way music lovers can show their dedication to their favorite albums and artists. But what if there were a way that they could earn exclusive perks from musicians by buying and trading their records digitally? What if artists could also make more money from their record sales? That's the mission of Vinal.",
+        overview: [
+            "Collecting vinyl records is a way music lovers can show their dedication to their favorite albums and artists. But what if there were a way that they could earn exclusive perks from musicians by buying and trading their records digitally? What if artists could also make more money from their record sales? That's the mission of Vinal.",
+        ],
     },
     3: {
         coverImg: <img src={CoverPartake} />,
@@ -86,7 +94,9 @@ export const ProjectList = {
             raisedNeutral: "#0d0d1a",
             primary: "#9bd2f2",
         },
-        overview: "There’s a stigma around online dating, but there’s certainly a greater one surrounding finding friends online. As a young adult, swiping on profiles of random people and practically asking them to be friends feels forced and unnatural. The people who resort to apps like Bumble BFF that offer such services do so out of desperation, usually after moving to a new city by themselves. But what if they had better options, through which they could make friends organically?",
+        overview: [
+            "There’s a stigma around online dating, but there’s certainly a greater one surrounding finding friends online. As a young adult, swiping on profiles of random people and practically asking them to be friends feels forced and unnatural. The people who resort to apps like Bumble BFF that offer such services do so out of desperation, usually after moving to a new city by themselves. But what if they had better options, through which they could make friends organically?",
+        ],
     },
 }
 
@@ -103,23 +113,12 @@ const ProjectDetails = () => {
                     {project.coverImg}
                 </div>
                 <div className="cover-content">
-                    {/* <div>
-                        <h3>
-                            Project
-                        </h3>
-                        <h2>
-                            {project.title}
-                        </h2>
-                    </div> */}
                     <ProjectInfo title="description" detail={project.description} />
                     <ProjectTags tags={project.tags}
                         color={project.theme.primary}
                         backgroundColor={"#101111"} />
                 </div>
             </AnimatedSection>
-            {/* <ProjectTags tags={project.tags}
-                color={project.theme.primary}
-                backgroundColor={"#101111"} /> */}
             <AnimatedSection className="section">
                 <div className="key-info">
                     <ProjectInfo title="timeframe" detail={project.timeframe} />
@@ -138,9 +137,13 @@ const ProjectDetails = () => {
                         </>
                     }
                 </div>
-                <p>
-                    {project.overview}
-                </p>
+                <div>
+                    {project.overview.map((p, index) => (
+                        <AnimatedP key={index}>
+                            {p}
+                        </AnimatedP>
+                    ))}
+                </div>
             </AnimatedSection>
             <Contact />
             <AnimatedP>

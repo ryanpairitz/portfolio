@@ -137,12 +137,9 @@ svg#vinal {
     align-items: flex-start;
     gap: 1em;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 85%, rgba(0, 0, 0, 0.3) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.38) 85%, rgba(0, 0, 0, 0.38) 100%);
 }
 
-/* .cover-content>div:last-child {
-    text-align: right;
-} */
 .cover-content>.tags {
     align-self: flex-end;
 }
@@ -209,7 +206,6 @@ hr {
     display: flex;
     align-items: baseline;
     gap: 1.618em;
-    /* white-space: pre-line; */
 }
 .section>div:first-child {
     flex: 1 0 50%;

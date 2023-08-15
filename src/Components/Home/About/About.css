@@ -21,10 +21,6 @@
     border-radius: calc(10.5rem / 34);
 }
 
-.link-container {
-    display: inline-block;
-}
-
 
 @media screen and (max-width: 802px) {
     .about-container {
