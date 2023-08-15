@@ -3,7 +3,7 @@ const ProjectTags = ({ tags, color, backgroundColor }) => {
         <ul className="tags">
             {tags.map((tag, index) => (
                 <li key={index} style={{
-                    background: backgroundColor,
+                    // background: backgroundColor,
                     color: color,
                 }}>
                     {tag}

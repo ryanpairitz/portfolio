@@ -4,7 +4,7 @@ import { animated, useTrail, useSpring } from "@react-spring/web";
 import AnimatedButton from './AnimatedButton';
 import './Link.css';
 
-const AnimatedLink = ({ to, href, hasManyTypes, children, state }) => {
+const AnimatedLink = ({ to, href, hasManyTypes, underlineColor, children, state }) => {
     const items = (hasManyTypes ? Children.toArray(children) :
         children.split("").map((value, index) => (
             { key: index, char: value }
@@ -30,7 +30,7 @@ const AnimatedLink = ({ to, href, hasManyTypes, children, state }) => {
     });
 
     return (
-        <AnimatedButton reverse={true}>
+        <AnimatedButton reverse={true} defaultUnderlineColor={underlineColor}>
             <animated.span className="link-container"
                 style={linkStyle}>
                 {href ?

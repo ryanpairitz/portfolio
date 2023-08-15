@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import { useSpring } from "@react-spring/web";
 
 const Socials = [
-    {
-        id: "twitter",
-        href: "https://twitter.com/ryanparrots",
-    },
+    // {
+    //     id: "twitter",
+    //     href: "https://twitter.com/ryanparrots",
+    // },
     {
         id: "instagram",
         href: "https://www.instagram.com/ryanpairitz/",

@@ -24,13 +24,11 @@ p {
   font-weight: 300;
   font-size: 0.618rem;
   text-align: left;
-  /* margin: 0; */
   margin-bottom: 21px;
   line-height: 1.618em;
 }
 
 p:last-child {
-  /* margin: 0; */
   margin-bottom: 0;
 }
 
@@ -120,7 +118,7 @@ nav {
   display: block;
 }
 
-.nav-link.underline-button>.underline {
+.underline:not(.filter>.underline) {
   bottom: 0;
 }
 
