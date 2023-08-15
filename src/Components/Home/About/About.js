@@ -4,12 +4,13 @@ import "./About.css";
 import IconInstagram from "../../img/IconInstagram";
 import IllustrationParrot from "./IllustrationParrot";
 import AnimatedP from "../../AnimatedP";
+import AnimatedSection from "../../AnimatedSection";
 
 const NoWrap = (props) => <span style={{ whiteSpace: "nowrap" }} {...props} />
 const About = () => {
     return (
         <div className="tab-container">
-            <div className="about-container">
+            <AnimatedSection className="about-container">
                 <IllustrationParrot className="about-illustration-container" />
                 <span className="about-text-container">
                     <AnimatedP>
@@ -70,7 +71,7 @@ const About = () => {
                         When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or watching sports.
                     </AnimatedP>
                 </span>
-            </div>
+            </AnimatedSection>
             <Contact />
         </div>
     );
