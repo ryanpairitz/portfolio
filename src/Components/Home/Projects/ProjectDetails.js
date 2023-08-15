@@ -13,7 +13,7 @@ export const ProjectList = {
     0: {
         coverImg: <img src={CoverIvi} />,
         title: "ivi",
-        description: "ivi (EYE-vee) is an app which allows users to mitigate missed connections via hyperlocal networking",
+        description: "ivi (EYE-vee) is an app for mitigating missed connections via hyperlocal networking",
         role: "Co-Founder, Product Designer, Developer",
         timeframe: "July 2021 - August 2022",
         team: "Tommy Han",
@@ -36,7 +36,7 @@ export const ProjectList = {
     1: {
         coverImg: <img src={CoverTheShirt} />,
         title: "The Shirt (2020) (Notre Dame)",
-        description: "The 31st edition of the University of Notre Dame's annual The Shirt",
+        description: "The 31st edition of The Shirt (2020) at the University of Notre Dame",
         role: "The Shirt Designer",
         timeframe: "September 2019 - April 2020",
         team: "Anna Frericks, Irene Valdes Salazar",
@@ -51,7 +51,7 @@ export const ProjectList = {
             primary: "#9b5f17",
         },
         overview: [
-            "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities. With estimated sales around 165,000 units each year, it is the highest-selling article of collegiate apparel in the nation.",
+            "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities. In its 31-year history, the Shirt has sold more than three million shirts and raised over $12 million. And, with more than 160,000 units sold each year, it is the highest-selling article of collegiate apparel in the nation.",
             "The stakes for The Shirt are greater than just sales, however. For Notre Dame students and fans, The Shirt is a pervasive symbol of the Notre Dame experience.",
         ],
     },
@@ -146,7 +146,7 @@ const ProjectDetails = () => {
                 </div>
             </AnimatedSection>
             <Contact />
-            <AnimatedP>
+            <AnimatedP className="notice">
                 I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!
             </AnimatedP>
         </div>

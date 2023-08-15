@@ -24,8 +24,7 @@ const NavWrapper = ({ condense, isHome, children }) => {
                     <animated.div
                         className="nav-background"
                         style={{
-                            ...style,
-                            backgroundColor: state?.theme.neutral ? state?.theme.neutral : "#0e1314",
+                            ...style
                         }}
                     />
                     {children}
