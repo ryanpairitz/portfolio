@@ -55,6 +55,39 @@ export const ProjectList = {
             "In its 31-year history, The Shirt has sold more than three million shirts and raised over $12 million. And, with more than 160,000 units sold each year, it is the highest-selling article of collegiate apparel in the nation.",
             "The stakes for The Shirt are greater than just sales, however. For Notre Dame students and fans, The Shirt is a pervasive symbol of the Notre Dame experience.",
         ],
+        sections: [
+            {
+                title: "Challenge",
+                content: [
+                    "To continue in that tradition, the goal for each edition of The Shirt is to include elements specific to Notre Dame, to evoke the unique experience of gameday on campus or life as a Notre Dame student.",
+                    "So rather than just put out another standard football shirt with a slight twist, each year a new committee is formed to design, promote, and organize distribution for The Shirt. Special emphasis and care is placed on the design process, which spans several months and consists of much drafting and deliberation.",
+                    "Again, the goal is to ensure the design elements have significance to all those who call Notre Dame their home. If they accomplish that, The Shirt is considered a success.",
+                ],
+            },
+            {
+                title: "Inspiration",
+                content: [
+                    "I grew up a fan of Notre Dame football and about half an hour from campus. Gameday on campus was a typical Saturday for me, even if I didn’t get to go into the game. I experienced all the gameday traditions — from the playing of Cathy Richardson’s “Here Come The Irish” at kickoff to the trumpets playing under the golden dome — for years before I even became a student.",
+                    "One of the traditions that impacted me most was The Shirt Unveiling itself. Whenever The Shirt was revealed and my parents would buy me one immediately after, it felt like I was receiving a gift on Christmas.",
+                    "That was a feeling I hoped to translate in the 2020 edition of The Shirt.",
+                ],
+            },
+            {
+                title: "Conception",
+                content: [
+                    "I suggested we go with a dark, spruce green, and to fill the design elements with rich navy blue and gold colors accented with white, to make it all feel like campus with a light dusting of snow covering the trees on God Quad.",
+                ],
+            },
+            {
+                img: <img src={CoverTheShirt} />,
+            },
+            {
+                content: [
+                    "For the actual design, I was inspired by the feeling of fantasy I got as a child from the line “And there’s a magic in the sound of their name” in “Here Come The Irish” — the same sense of wonder I would get early on Christmas morning when I would see the presents under the tree.",
+                    "In one of my initial digital sketches, I decided to draw up the word “Irish” in a style inspired by a traditional Celtic typeface, which featured a letter ’S’ whose lower curve formed a perfect circle and wrapped back into the spine. I then thought it would be perfect if I put a Notre Dame monogram inside of that perfect circle, and made the the visual center of the design.",
+                ],
+            },
+        ],
     },
     2: {
         coverImg: <img src={CoverVinal} />,
@@ -128,7 +161,7 @@ const ProjectDetails = () => {
                     }
                     <ProjectInfo title="role" detail={project.role} />
                     {project.organization &&
-                        <ProjectInfo title="organization" detail={project.organization} 
+                        <ProjectInfo title="organization" detail={project.organization}
                             href={project.organizationURL} underlineColor={project.theme.primary} />
                     }
                     {project.recognition &&
@@ -146,6 +179,27 @@ const ProjectDetails = () => {
                     ))}
                 </div>
             </AnimatedSection>
+            {project.sections?.map((section, index) => (
+                <AnimatedSection key={index} className="section">
+                    {section.title &&
+                        <div className="subheading">
+                            {section.title} —
+                        </div>
+                    }
+                    {section.content &&
+                        <div>
+                            {section.content.map((p, index) => (
+                                <AnimatedP key={index}>
+                                    {p}
+                                </AnimatedP>
+                            ))}
+                        </div>
+                    }
+                    {section.img &&
+                        section.img
+                    }
+                </AnimatedSection>
+            ))}
             <Contact />
             <AnimatedP className="notice">
                 I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!

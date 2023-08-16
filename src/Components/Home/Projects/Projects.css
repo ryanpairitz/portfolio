@@ -194,6 +194,7 @@ hr {
 .section {
     display: flex;
     align-items: baseline;
+    justify-content: flex-end;
     gap: 1.618em;
     padding: 0 1em;
 }
@@ -202,6 +203,14 @@ hr {
 }
 .section>div:first-child {
     flex: 0 1 50%;
+}
+.section>img {
+    width: 100%;
+    border-radius: calc(10.5rem / 34);
+}
+.subheading {
+    font-size: 1rem;
+    text-align: left;
 }
 
 @media screen and (max-width: 855px) {
