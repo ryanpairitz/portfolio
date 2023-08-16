@@ -40,7 +40,7 @@ export const ProjectList = {
         role: "The Shirt Designer",
         timeframe: "September 2019 - April 2020",
         team: "Anna Frericks, Irene Valdes Salazar",
-        organization: "The Shirt (ND)",
+        organization: "The Shirt (Notre Dame)",
         organizationURL: "https://theshirt.nd.edu",
         tags: [
             "graphic design",
@@ -51,7 +51,8 @@ export const ProjectList = {
             primary: "#9b5f17",
         },
         overview: [
-            "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities. In its 31-year history, the Shirt has sold more than three million shirts and raised over $12 million. And, with more than 160,000 units sold each year, it is the highest-selling article of collegiate apparel in the nation.",
+            "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities.",
+            "In its 31-year history, The Shirt has sold more than three million shirts and raised over $12 million. And, with more than 160,000 units sold each year, it is the highest-selling article of collegiate apparel in the nation.",
             "The stakes for The Shirt are greater than just sales, however. For Notre Dame students and fans, The Shirt is a pervasive symbol of the Notre Dame experience.",
         ],
     },

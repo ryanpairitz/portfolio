@@ -105,10 +105,6 @@ svg#vinal {
     margin-bottom: calc(89rem / 34);
 }
 
-.details-container>div:nth-child(2) {
-    padding: 0 1em;
-}
-
 .details-container>.notice {
     width: 61.8%;
     margin: 0 auto;
@@ -199,6 +195,7 @@ hr {
     display: flex;
     align-items: baseline;
     gap: 1.618em;
+    padding: 0 1em;
 }
 .section>div{
     flex: 1 0 50%;
@@ -207,16 +204,20 @@ hr {
     flex: 0 1 50%;
 }
 
+@media screen and (max-width: 855px) {
+    .cover-container {
+        height: calc(521rem / 34);
+    }
+}
+
 @media screen and (max-width: 800px) {
     .section {
         flex-direction: column;
+        padding: 0 0.618em;
     }
     .details-container>.notice {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 669px) {
     .cover-content {
         padding: 1.618em 0.618em 0.618em;
         gap: 0.618em;
@@ -227,19 +228,15 @@ hr {
     .details-container {
         padding: 61.19px 1.618rem calc(144rem / 34);
     }
-
     .cover-content>.info h3 {
         font-size: .618em;
     }
-
     .cover-content>.info h2 {
         font-size: .85em;
     }
-
     .tags {
         font-size: calc(13px * 0.9);
     }
-
     .details-container>.tags {
         margin: calc(13em / 16);
     }
@@ -255,8 +252,8 @@ hr {
     }
 }
 
-@media screen and (max-height: 760px) {
+@media screen and (max-height: 844px) {
     .cover-container {
-        height: calc(521rem / 34);
+        height: calc(466rem / 34);
     }
 }
