@@ -10,6 +10,8 @@ import ProjectInfo from "./ProjectInfo";
 import AnimatedSection from "../../AnimatedSection";
 import Button from "./Button";
 
+import TheShirtFrontSketch from "./the-shirt-conception_sketch_front.png";
+
 export const ProjectList = {
     0: {
         coverImg: <img src={CoverIvi} alt="The ivi logo above the slogan, &#8220;Connect with the world around you.&#8221; Surrounding are two iPhones exemplifying the &#8220;Near You&#8221; and &#8220;Missed&#8221; views, respectively, within the ivi app, which showcase the profile cards of example users in their twenties." />,
@@ -103,14 +105,20 @@ export const ProjectList = {
             },
             {
                 content: [
-                    "Before it was canceled due to COVID, the Irish were fittingly supposed to play their 2020 season opener in Ireland. So, in one of my initial digital sketches, I decided to draw up the word “Irish” in a style inspired by a traditional Celtic typeface, which featured a letter ’S’ whose lower curve formed a perfect circle and wrapped back into the spine. I then thought it would be perfect if we put a Notre Dame monogram inside of that perfect circle, making it the visual center of the front design.",
+                    "Before it was canceled due to COVID, the Irish were supposed to play their 2020 season opener in Ireland. So, in one of my initial digital sketches, I decided to draw up the word “Irish” in a style inspired by a traditional Celtic typeface, which featured a letter ’S’ whose lower curve formed a perfect circle and wrapped back into the spine. The goal was then to make the inside of the circle the visual center of the front design, which could be filled with a monogram or something significant to Notre Dame.",
+                    "If we were to make the rest of the design form another ellipse around the ’S’ ring, both rings could represent the railings of the third and fourth floors of the Main Building (directly beneath the Golden Dome), where trumpets famously play the Notre Dame Victory March and Alma Mater before every home game. As a nod to the tradition, it was only appropriate to adorn both rings with trumpet players.",
+                    "I thought it would be a cool little Easter egg to include 11 trumpets in the outer loop and 7 in the inner one, for the respective 11 national championships and 7 Heisman trophies the football program has brought Notre Dame.",
+                    "Altogether, that’s what became the basis for the front of 2020’s The Shirt.",
                 ],
+            },
+            {
+                img: <img src={TheShirtFrontSketch} alt="The initial sketch of the University of Notre Dame's 2020 edition of The Shirt." />
             },
             {
                 title: "Takeaways",
                 content: [
-                    "It was an honor and a privilege to be selected to help in the direction and creation of perhaps the most anticipated annual collegiate shirt in the nation.",
-                    "It was also extremely gratifying and humbling to see the product through the lens of national coverage, during Notre Dame Football's successful 2020 season, when they took down #1 Clemson and made their second College Football Playoff and National Semifinal appearance.",
+                    "It was an honor and a privilege to be selected to help in the direction and creation of perhaps the most anticipated annual collegiate shirt in the nation. Working as a part of The Shirt Committee taught me a lot more about the collaborative design process and showed me how much room I have for improvement as a designer.",
+                    "As such, it was extremely gratifying and humbling to see the product through the lens of national coverage during Notre Dame Football's successful 2020 season, when they took down #1 Clemson and made their second College Football Playoff and National Semifinal appearance.",
                 ],
             },
         ],
