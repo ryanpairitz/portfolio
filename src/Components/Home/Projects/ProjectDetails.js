@@ -12,7 +12,7 @@ import Button from "./Button";
 
 export const ProjectList = {
     0: {
-        coverImg: <img src={CoverIvi} />,
+        coverImg: <img src={CoverIvi} alt="The ivi logo above the slogan, &#8220;Connect with the world around you.&#8221; Surrounding are two iPhones exemplifying the &#8220;Near You&#8221; and &#8220;Missed&#8221; views, respectively, within the ivi app, which showcase the profile cards of example users in their twenties." />,
         title: "ivi",
         description: "ivi (EYE-vee) is an app for mitigating missed connections via hyperlocal networking",
         role: "Co-Founder, Product Designer, Developer",
@@ -40,7 +40,7 @@ export const ProjectList = {
         ],
     },
     1: {
-        coverImg: <img src={CoverTheShirt} />,
+        coverImg: <img src={CoverTheShirt} alt="Notre Dame's The Shirt logo, overlaying a banner hung above the entrance to the University of Notre Dame's Hammes Bookstore, advertising the 31st edition of The Shirt (2020)."/>,
         title: "The Shirt (2020) (Notre Dame)",
         description: "The 31st edition of The Shirt (2020) at the University of Notre Dame",
         role: "The Shirt Designer",
@@ -116,7 +116,7 @@ export const ProjectList = {
         ],
     },
     2: {
-        coverImg: <img src={CoverVinal} />,
+        coverImg: <img src={CoverVinal} alt="The Vinal logo above the slogan, &#8220;You, in music.&#8221; The graphic overlays the grooves of a vinyl record." />,
         title: "Vinal (Brand Guide)",
         description: "Brand guidelines for Vinal, a dapp used to express yourself through — and be rewarded for — the records you collect",
         role: "UI/UX Designer & Developer, Director of Branding",
@@ -146,7 +146,7 @@ export const ProjectList = {
         ],
     },
     3: {
-        coverImg: <img src={CoverPartake} />,
+        coverImg: <img src={CoverPartake} alt="The Partake logo above the slogan, &#8220;Make friends by doing.&#8221; To the left is an iPhone on the main view of the Partake app, portraying a user's profile card, which shows their name, bio, common interests, and an option to &#8220;Recruit&#8221; them, and to the right is an iPhone demonstrating the chat feature."/>,
         title: "Partake",
         description: "Partake is an app for finding friends by participating in common hobbies",
         role: "Graphic & UI/UX Designer, Frontend Developer",
