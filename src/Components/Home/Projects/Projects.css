@@ -90,13 +90,14 @@ svg#vinal {
 
 .details-container {
     font-size: calc(34px * 0.9);
+    text-align: left;
     min-height: calc(100vh - (89rem / 34));
     padding: calc(62rem / 34) calc(152rem / 34) calc(144rem / 34);
     border-bottom-left-radius: calc(44.5rem / 34);
     border-bottom-right-radius: calc(44.5rem / 34);
 }
 
-.details-container * {
+.details-container>* {
     color: white;
     fill: white;
 }
@@ -135,18 +136,17 @@ svg#vinal {
 
 .info {
     font-size: 0.618em;
-    text-align: left;
     margin-bottom: calc(21rem / 34);
 }
 
-.info h3 {
+.details-container h3 {
     font-size: calc(16em / 21);
     font-weight: 300;
     letter-spacing: calc((55rem / 34) / 16);
     text-transform: lowercase;
 }
 
-.info h2 {
+.details-container h2 {
     font-size: 1em;
     font-weight: 400;
     font-style: normal;
@@ -154,7 +154,7 @@ svg#vinal {
 }
 
 .cover-content>.info,
-.cover-content>.info h3,
+.cover-content h3,
 .info:last-child {
     margin-bottom: 0;
 }
@@ -204,7 +204,10 @@ hr {
 .section>div:first-child {
     flex: 0 1 50%;
 }
-.section>img {
+.section.img {
+    padding: 0;
+}
+.img>img, .img>svg {
     width: 100%;
     border-radius: calc(10.5rem / 34);
 }
@@ -237,10 +240,10 @@ hr {
     .details-container {
         padding: 61.19px 1.618rem calc(144rem / 34);
     }
-    .cover-content>.info h3 {
+    .cover-content h3 {
         font-size: .618em;
     }
-    .cover-content>.info h2 {
+    .cover-content h2 {
         font-size: .85em;
     }
     .tags {

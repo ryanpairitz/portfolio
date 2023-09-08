@@ -3,17 +3,16 @@ import "./Contact.css";
 import AnimatedP from "../AnimatedP";
 import { useLocation } from "react-router-dom";
 
-const Contact = () => {
-    const { state } = useLocation();
+const Contact = ({ color }) => {
+    const { pathname } = useLocation();
+
     return (
         <div className="line-container">
             <AnimatedP className="line" style={{
-                backgroundColor: state?.theme.raisedNeutral && "#101111"
+                backgroundColor: pathname !== "/about" && "#101111"
             }}>
                 <b>Want to talk? Reach out:</b>
-                <EmailButton style={{
-                    backgroundColor: state?.theme.primary && state?.theme.primary
-                }} />
+                <EmailButton color={color} />
             </AnimatedP>
         </div>
     );

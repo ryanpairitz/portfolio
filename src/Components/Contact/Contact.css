@@ -13,16 +13,10 @@
     will-change: contents;
 }
 
-.button {
-    background-color: var(--green-parakeet);
-    color: var(--cool-neutral);
-    fill: var(--cool-neutral);
-    padding: 0 calc(17rem / 34);
-    height: 1.618rem;
+.line>.button {
     display: flex;
     align-items: center;
     gap: calc(8rem / 34);
-    border-radius: calc(6.5rem / 34);
     box-sizing: content-box !important;
 }
 

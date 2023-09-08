@@ -8,6 +8,7 @@ import Contact from "../../Contact/Contact";
 import AnimatedP from "../../AnimatedP";
 import ProjectInfo from "./ProjectInfo";
 import AnimatedSection from "../../AnimatedSection";
+import Button from "./Button";
 
 export const ProjectList = {
     0: {
@@ -27,6 +28,11 @@ export const ProjectList = {
             neutral: "#0c1f1f",
             raisedNeutral: "#011211",
             primary: "#00dbb5",
+            primaryRGB: [
+                0,
+                219,
+                181
+            ],
         },
         overview: [
             "Say you're single, and — in a chance encounter — you think you've found the one. However, something comes up that prevents you from ever getting the person's information. There is no reliable solution by which users can easily recover missed connections, so the chances are that you will never see that person again.",
@@ -49,6 +55,11 @@ export const ProjectList = {
             neutral: "#010a12",
             raisedNeutral: "#0b131c",
             primary: "#9b5f17",
+            primaryRGB: [
+                155,
+                95,
+                23
+            ],
         },
         overview: [
             "At the beginning of my sophomore year in 2020, I was selected out of hundreds of applicants to serve as one of three designers for The Shirt, the annual football shirt sold at the University of Notre Dame to raise money for student clubs and activities.",
@@ -75,16 +86,31 @@ export const ProjectList = {
             {
                 title: "Conception",
                 content: [
-                    "I suggested we go with a dark, spruce green, and to fill the design elements with rich navy blue and gold colors accented with white, to make it all feel like campus with a light dusting of snow covering the trees on God Quad.",
+                    "I suggested we start with a dark, spruce-green fabric as a base. Then, we could fill the design elements with an understated navy blue and a pure white accent, to evoke the feeling of a winter walk on God Quad, where a light dusting of snow coats the trees. Complementing the cool tones with a rich gold would create the same sense of warmth as candles burning at the Grotto.",
                 ],
             },
             {
-                img: <img src={CoverTheShirt} />,
+                img: <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 610 233" enableBackground="new 0 0 610 233" xmlSpace="preserve">
+           <rect opacity="0.5" fill="#0B1C18" width="610" height="233"/>
+           <path fill="#0B1C18" d="M358,225H12c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h346c2.2,0,4,1.8,4,4v209C362,223.2,360.2,225,358,225z"/>
+           <path fill="#9B5F17" d="M449.5,225H374c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h75.5c2.2,0,4,1.8,4,4v209
+               C453.5,223.2,451.7,225,449.5,225z"/>
+           <path fill="#0D1319" d="M541,225h-75.5c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4H541c2.2,0,4,1.8,4,4v209C545,223.2,543.2,225,541,225z"
+               />
+           <path fill="#FFFFFF" d="M598,225h-41c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h41c2.2,0,4,1.8,4,4v209C602,223.2,600.2,225,598,225z"/>
+           </svg>,
             },
             {
                 content: [
-                    "For the actual design, I was inspired by the feeling of fantasy I got as a child from the line “And there’s a magic in the sound of their name” in “Here Come The Irish” — the same sense of wonder I would get early on Christmas morning when I would see the presents under the tree.",
-                    "In one of my initial digital sketches, I decided to draw up the word “Irish” in a style inspired by a traditional Celtic typeface, which featured a letter ’S’ whose lower curve formed a perfect circle and wrapped back into the spine. I then thought it would be perfect if I put a Notre Dame monogram inside of that perfect circle, and made the the visual center of the design.",
+                    "Before it was canceled due to COVID, the Irish were fittingly supposed to play their 2020 season opener in Ireland. So, in one of my initial digital sketches, I decided to draw up the word “Irish” in a style inspired by a traditional Celtic typeface, which featured a letter ’S’ whose lower curve formed a perfect circle and wrapped back into the spine. I then thought it would be perfect if we put a Notre Dame monogram inside of that perfect circle, making it the visual center of the front design.",
+                ],
+            },
+            {
+                title: "Takeaways",
+                content: [
+                    "It was an honor and a privilege to be selected to help in the direction and creation of perhaps the most anticipated annual collegiate shirt in the nation.",
+                    "It was also extremely gratifying and humbling to see the product through the lens of national coverage, during Notre Dame Football's successful 2020 season, when they took down #1 Clemson and made their second College Football Playoff and National Semifinal appearance.",
                 ],
             },
         ],
@@ -105,6 +131,15 @@ export const ProjectList = {
             neutral: "#272727",
             raisedNeutral: "#161616",
             primary: "#df195d",
+            primaryRGB: [
+                223,
+                25,
+                93
+            ],
+        },
+        link: {
+            label: "visit",
+            href: "https://brand.vinal.io",
         },
         overview: [
             "Collecting vinyl records is a way music lovers can show their dedication to their favorite albums and artists. But what if there were a way that they could earn exclusive perks from musicians by buying and trading their records digitally? What if artists could also make more money from their record sales? That's the mission of Vinal.",
@@ -127,6 +162,11 @@ export const ProjectList = {
             neutral: "#1c1821",
             raisedNeutral: "#0d0d1a",
             primary: "#9bd2f2",
+            primaryRGB: [
+                155,
+                210,
+                242
+            ],
         },
         overview: [
             "There’s a stigma around online dating, but there’s certainly a greater one surrounding finding friends online. As a young adult, swiping on profiles of random people and practically asking them to be friends feels forced and unnatural. The people who resort to apps like Bumble BFF that offer such services do so out of desperation, usually after moving to a new city by themselves. But what if they had better options, through which they could make friends organically?",
@@ -137,6 +177,7 @@ export const ProjectList = {
 const ProjectDetails = () => {
     const projectId = useParams().id;
     const project = ProjectList[projectId];
+    const color = "" + project.theme.primaryRGB.map(val => val); // append to "" to make array string; will automatically join array elements with ","
 
     return (
         <div className="details-container" style={{
@@ -170,6 +211,11 @@ const ProjectDetails = () => {
                             <ProjectInfo title="recognition" detail={project.recognition} />
                         </>
                     }
+                    {project.link &&
+                        <Button label={project.link.label} 
+                            href={project.link.href} 
+                            color={color} />
+                    }
                 </div>
                 <div>
                     {project.overview.map((p, index) => (
@@ -180,7 +226,7 @@ const ProjectDetails = () => {
                 </div>
             </AnimatedSection>
             {project.sections?.map((section, index) => (
-                <AnimatedSection key={index} className="section">
+                <AnimatedSection key={index} className={section.img ? "section img" : "section"}>
                     {section.title &&
                         <div className="subheading">
                             {section.title} —
@@ -200,7 +246,7 @@ const ProjectDetails = () => {
                     }
                 </AnimatedSection>
             ))}
-            <Contact />
+            <Contact color={color}/>
             <AnimatedP className="notice">
                 I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!
             </AnimatedP>

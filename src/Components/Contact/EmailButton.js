@@ -14,25 +14,31 @@ function convertRemToPixels(x) {
     return x * remValue / 34;
 }
 
-const EmailButton = ({ style }) => {
+const EmailButton = ({ color }) => {
     const baseWidth = convertRemToPixels(21);
     const [ref, bounds] = useMeasure();
-    const [showEmail, setShowEmail] = useState(false);
+    const [hovering, setHover] = useState(false);
     const springApi = useSpringRef();
     const buttonStyles = useSpring({
         ref: springApi,
         from: {
             width: baseWidth,
-            scale: 1
+            scale: 1,
+            backgroundColor: "rgba(" + color + ",0.15)",
+            fill: "rgba(" + color + ",0.77)",
+            // color: "rgba(" + color + ",0.77)",
         },
         to: {
-            width: showEmail ? (bounds.width + baseWidth) : baseWidth,
-            scale: showEmail ? 1.0557 : 1
+            width: hovering ? (bounds.width + baseWidth) : baseWidth,
+            scale: hovering ? 1.0557 : 1,
+            backgroundColor: hovering ? "rgba(" + color + ",0.382)" : "rgba(" + color + ",0.15)",
+            // color: hovering ? "rgba(" + color + ",1)" : "rgba(" + color + ",0.77)",
+            fill: hovering ? "rgba(" + color + ",1)" : "rgba(" + color + ",0.77)",
         },
         delay: 100,
     });
     const transApi = useSpringRef();
-    const transitions = useTransition(showEmail ? addressChars : [], {
+    const transitions = useTransition(hovering ? addressChars : [], {
         ref: transApi,
         from: {opacity: 0, scale: 0},
         enter: {opacity: 1, scale: 1},
@@ -42,13 +48,13 @@ const EmailButton = ({ style }) => {
 
     return (
         <animated.a className='button'
-            onMouseEnter={() => setShowEmail(true)}
-            onMouseLeave={() => setShowEmail(false)}
-            href={showEmail ? "mailto:ryn.pair@me.com" : "#"}
-            style={{ ...style, ...buttonStyles }}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            href={hovering ? "mailto:ryn.pair@me.com" : "#"}
+            style={buttonStyles}
         >
             <IconEmail width={baseWidth} className="email-icon"/>
-            {showEmail &&
+            {hovering &&
                 <span
                     className='button-text'
                     ref={ref}

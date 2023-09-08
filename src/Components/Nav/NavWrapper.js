@@ -1,9 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useLayoutEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 const NavWrapper = ({ condense, isHome, children }) => {
-    const { state } = useLocation();
     const fillWrapper = () => window.scrollY >= 144;
     const [scrolled, setScrolled] = useState(fillWrapper);
     useLayoutEffect(() => {
