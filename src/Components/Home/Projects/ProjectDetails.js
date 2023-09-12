@@ -11,6 +11,9 @@ import AnimatedSection from "../../AnimatedSection";
 import Button from "./Button";
 
 import TheShirtFrontSketch from "./the-shirt-conception_sketch_front.png";
+import { ReactComponent as TheShirtFrontDraft1 } from "./the-shirt-front-draft_1.svg";
+import { ReactComponent as TheShirtFrontDraft2 } from "./the-shirt-front-draft_2.svg";
+import TheShirtFrontMockup from "./the-shirt-front-mockup.png";
 
 export const ProjectList = {
     0: {
@@ -42,7 +45,7 @@ export const ProjectList = {
         ],
     },
     1: {
-        coverImg: <img src={CoverTheShirt} alt="Notre Dame's The Shirt logo, overlaying a banner hung above the entrance to the University of Notre Dame's Hammes Bookstore, advertising the 31st edition of The Shirt (2020)."/>,
+        coverImg: <img src={CoverTheShirt} alt="Notre Dame's The Shirt logo, overlaying a banner hung above the entrance to the University of Notre Dame's Hammes Bookstore, advertising the 31st edition of The Shirt (2020)." />,
         title: "The Shirt (2020) (Notre Dame)",
         description: "The 31st edition of The Shirt (2020) at the University of Notre Dame",
         role: "The Shirt Designer",
@@ -92,16 +95,17 @@ export const ProjectList = {
                 ],
             },
             {
-                img: <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 610 233" enableBackground="new 0 0 610 233" xmlSpace="preserve">
-           <rect opacity="0.5" fill="#0B1C18" width="610" height="233"/>
-           <path fill="#0B1C18" d="M358,225H12c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h346c2.2,0,4,1.8,4,4v209C362,223.2,360.2,225,358,225z"/>
-           <path fill="#9B5F17" d="M449.5,225H374c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h75.5c2.2,0,4,1.8,4,4v209
+                img: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    viewBox="0 0 610 233" preserveAspectRatio='xMidYMid meet'
+                    style={{ backgroundColor: "rgba(11,24,28,0.5)" }}>
+                    {/* <rect opacity="0.5" fill="#0B1C18" width="610" height="233"/> */}
+                    <path fill="#0B1C18" d="M358,225H12c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h346c2.2,0,4,1.8,4,4v209C362,223.2,360.2,225,358,225z" />
+                    <path fill="#9B5F17" d="M449.5,225H374c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h75.5c2.2,0,4,1.8,4,4v209
                C453.5,223.2,451.7,225,449.5,225z"/>
-           <path fill="#0D1319" d="M541,225h-75.5c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4H541c2.2,0,4,1.8,4,4v209C545,223.2,543.2,225,541,225z"
-               />
-           <path fill="#FFFFFF" d="M598,225h-41c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h41c2.2,0,4,1.8,4,4v209C602,223.2,600.2,225,598,225z"/>
-           </svg>,
+                    <path fill="#0D1319" d="M541,225h-75.5c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4H541c2.2,0,4,1.8,4,4v209C545,223.2,543.2,225,541,225z"
+                    />
+                    <path fill="#FFFFFF" d="M598,225h-41c-2.2,0-4-1.8-4-4V12c0-2.2,1.8-4,4-4h41c2.2,0,4,1.8,4,4v209C602,223.2,600.2,225,598,225z" />
+                </svg>,
             },
             {
                 content: [
@@ -115,10 +119,35 @@ export const ProjectList = {
                 img: <img src={TheShirtFrontSketch} alt="The initial sketch of the University of Notre Dame's 2020 edition of The Shirt." />
             },
             {
+                title: "Design Iterations",
+                content: [
+                    "After converting the rough sketch into vector art for an initial draft…",
+                ],
+            },
+            {
+                img: <TheShirtFrontDraft1 />,
+            },
+            {
+                content: [
+                    "…then revising with the other designers and the rest of the Committee…",
+                ],
+            },
+            {
+                img: <TheShirtFrontDraft2 />,
+            },
+            {
+                content: [
+                    "…and revising some more in Los Angeles with the team at Colosseum — the vendor we chose to produce The Shirt — we ended up with the final product (below).",
+                ],
+            },
+            {
+                img: <img src={TheShirtFrontMockup} alt="Mockup showing the front of the University of Notre Dame's 2020 edition of The Shirt." />
+            },
+            {
                 title: "Takeaways",
                 content: [
                     "It was an honor and a privilege to be selected to help in the direction and creation of perhaps the most anticipated annual collegiate shirt in the nation. Working as a part of The Shirt Committee taught me a lot more about the collaborative design process and showed me how much room I have for improvement as a designer.",
-                    "As such, it was extremely gratifying and humbling to see the product through the lens of national coverage during Notre Dame Football's successful 2020 season, when they took down #1 Clemson and made their second College Football Playoff and National Semifinal appearance.",
+                    "As such, it was extremely gratifying and humbling to see the product through the lens of national coverage during Notre Dame Football's successful 2020 season, when they defeated #1 Clemson and made their second College Football Playoff and National Semifinal appearance.",
                 ],
             },
         ],
@@ -154,7 +183,7 @@ export const ProjectList = {
         ],
     },
     3: {
-        coverImg: <img src={CoverPartake} alt="The Partake logo above the slogan, &#8220;Make friends by doing.&#8221; To the left is an iPhone on the main view of the Partake app, portraying a user's profile card, which shows their name, bio, common interests, and an option to &#8220;Recruit&#8221; them, and to the right is an iPhone demonstrating the chat feature."/>,
+        coverImg: <img src={CoverPartake} alt="The Partake logo above the slogan, &#8220;Make friends by doing.&#8221; To the left is an iPhone on the main view of the Partake app, portraying a user's profile card, which shows their name, bio, common interests, and an option to &#8220;Recruit&#8221; them, and to the right is an iPhone demonstrating the chat feature." />,
         title: "Partake",
         description: "Partake is an app for finding friends by participating in common hobbies",
         role: "Graphic & UI/UX Designer, Frontend Developer",
@@ -220,8 +249,8 @@ const ProjectDetails = () => {
                         </>
                     }
                     {project.link &&
-                        <Button label={project.link.label} 
-                            href={project.link.href} 
+                        <Button label={project.link.label}
+                            href={project.link.href}
                             color={color} />
                     }
                 </div>
@@ -254,7 +283,7 @@ const ProjectDetails = () => {
                     }
                 </AnimatedSection>
             ))}
-            <Contact color={color}/>
+            <Contact color={color} />
             <AnimatedP className="notice">
                 I'm in the process of adding more details and projects to my website, but please contact me using the button above if you'd like to hear more about my experience!
             </AnimatedP>
