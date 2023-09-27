@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import CoverTheShirt from "./CoverShirt.png";
-import CoverPartake from "./CoverPartake.png";
+import CoverPartake from "./CoverPartake.jpg";
 import CoverIvi from "./CoverIvi.png";
 import CoverVinal from "./CoverVinal.png";
 import ProjectTags from "./ProjectTags";
