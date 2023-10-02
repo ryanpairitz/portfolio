@@ -16,6 +16,9 @@ import { ReactComponent as TheShirtFrontDraft2 } from "./the-shirt-front-draft_2
 import { ReactComponent as TheShirtFrontDraft3 } from "./the-shirt-front-draft_3.svg";
 import TheShirtFrontMockup from "./the-shirt-front-mockup.png";
 
+import PartakeDeck from "./partake-processDeck.pdf";
+import IviDeck from "./ivi-pitchDeck.pdf";
+
 export const ProjectList = {
     0: {
         coverImg: <img src={CoverIvi} alt="The ivi logo above the slogan, &#8220;Connect with the world around you.&#8221; Surrounding are two iPhones exemplifying the &#8220;Near You&#8221; and &#8220;Missed&#8221; views, respectively, within the ivi app, which showcase the profile cards of example users in their twenties." />,
@@ -39,6 +42,10 @@ export const ProjectList = {
                 219,
                 181
             ],
+        },
+        link: {
+            label: "pitch deck",
+            href: IviDeck,
         },
         overview: [
             "Say you're single, and — in a chance encounter — you think you've found the one. However, something comes up that prevents you from ever getting the person's information. There is no reliable solution by which users can easily recover missed connections, so the chances are that you will never see that person again.",
@@ -218,6 +225,10 @@ export const ProjectList = {
                 210,
                 242
             ],
+        },
+        link: {
+            label: "process deck",
+            href: PartakeDeck,
         },
         overview: [
             "There’s a stigma around online dating, but there’s certainly a greater one surrounding finding friends online. As a young adult, swiping on profiles of random people and practically asking them to be friends feels forced and unnatural. The people who resort to apps like Bumble BFF that offer such services do so out of desperation, usually after moving to a new city by themselves. But what if they had better options, through which they could make friends organically?",
