@@ -210,7 +210,7 @@ export const ProjectList = {
         role: "Graphic & UI/UX Designer, Frontend Developer",
         timeframe: "January 2022 - May 2022",
         team: "Keegan MacDonell, Maggie Farrell",
-        recognition: "Best App Third Runner Up, Advanced Database Projects, University of Notre Dame",
+        recognition: "Best App Runner Up, Advanced Database Projects, University of Notre Dame",
         tags: [
             "graphic design",
             "ui/ux design",
