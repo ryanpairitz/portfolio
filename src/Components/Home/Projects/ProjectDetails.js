@@ -231,7 +231,7 @@ export const ProjectList = {
             href: PartakeDeck,
         },
         overview: [
-            "There’s a stigma around online dating, but there’s certainly a greater one surrounding finding friends online. As a young adult, swiping on profiles of random people and practically asking them to be friends feels forced and unnatural. The people who resort to apps like Bumble BFF that offer such services do so out of desperation, usually after moving to a new city by themselves. But what if they had better options, through which they could make friends organically?",
+            "There’s a stigma attached to online dating, but there’s certainly a greater one surrounding finding friends online. Partake's social platform aims to solve that problem by allowing users to find friends IRL by participating in their favorite hobbies. Before starting the development process with my team, I followed a user-centric product development cycle to design a prototype — to ensure our solution adequately allows users to not only find others with common interests, but also discover events at which they can exercise those interests."
         ],
     },
 }
