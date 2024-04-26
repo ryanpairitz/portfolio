@@ -1,10 +1,7 @@
-import { animated, useSpring, useTransition } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 import { useLayoutEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Brandmark from "./Brandmark";
-import Logotype from "./Logotype";
-import NavWrapper from "./NavWrapper";
-import SocialsList from "./SocialsList";
 
 const Nav = () => {
     const scalar = 1.0557;
@@ -36,39 +33,10 @@ const Nav = () => {
     // to then search for that project's details based on the id
 
     // https://reactrouter.com/en/main/hooks/use-loader-data
-    const [condense, setCondense] = useState(false);
-    const [windowSize, setWindowSize] = useState(getWindowSize);
-    useLayoutEffect(() => {
-        const handleResize = () => setWindowSize(getWindowSize);
-        window.addEventListener('resize', handleResize);
-        return () =>
-            window.removeEventListener('resize', handleResize);
-    });
-    useLayoutEffect(() => {
-        setCondense(windowSize.innerWidth <= 624);
-    }, [windowSize]);
-    const { fill, accentFill, accentOpacity, opacity, ...logoStyle } = useSpring({
+    const { ...logoStyle } = useSpring({
         to: {
-            scale: hovering ? scalar : 1,
-            fill: isHome ? "#0c7a6e" : location.state?.theme.primary,
-            accentFill: isHome ? "#0c7a6e" : location.state?.theme.primary,
-            accentOpacity: hovering ? 1 : 0.62,
-            opacity: hovering ? 0.62 : 0.38,
+            scale: hovering ? scalar : 1
         }
-    });
-    const transition = useTransition(isHome, {
-        from: () => !isDefault && {
-            opacity: 0,
-            x: -144,
-        },
-        enter: {
-            opacity: 1,
-            x: 0,
-        },
-        leave: () => !isDefault && {
-            opacity: 0,
-            x: -144,
-        },
     });
     const scrollToTop = () => {
         if (isHome) {
@@ -87,38 +55,15 @@ const Nav = () => {
     };
 
     return (
-        <NavWrapper condense={condense} isHome={isHome}>
             <animated.div
                 className="logo-container"
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
                 onClick={scrollToTop}
                 style={logoStyle}>
-                <Brandmark className="brandmark"
-                    style={{
-                        fill: fill,
-                        opacity: opacity,
-                    }}
-                    accentStyle={{ 
-                        fill: accentFill,
-                        opacity: accentOpacity,
-                    }} />
-                {!condense && transition((style, content) => (
-                    content &&
-                    <animated.div style={style}>
-                        <Logotype className="logotype" 
-                            style={{ fill: fill, opacity: accentOpacity }} />
-                    </animated.div>
-                ))}
+                <Brandmark className="brandmark"/>
             </animated.div>
-            <SocialsList />
-        </NavWrapper>
     );
 };
-
-const getWindowSize = () => {
-    const { innerWidth, innerHeight } = window;
-    return { innerWidth, innerHeight };
-}
 
 export default Nav;

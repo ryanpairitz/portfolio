@@ -18,9 +18,9 @@ const AnimatedSection = ({ className, style, children }) => {
     }
   );
   return (
-    <animated.div ref={ref} style={{ ...style, ...springs }} className={className}>
+    <animated.section ref={ref} style={{ ...style, ...springs }} className={className}>
       {children}
-    </animated.div>
+    </animated.section>
   );
 };
 

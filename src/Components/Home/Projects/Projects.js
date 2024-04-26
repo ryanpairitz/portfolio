@@ -114,27 +114,7 @@ export const ProjectList = [
 ]
 
 const Projects = () => {
-    const filterList = useOutletContext();
-    const location = useLocation();
-    const [filterByPersonal, setFilterByPersonal] = useState(false);
     const [projectList, setProjectList] = useState(ProjectList);
-
-    useEffect(() => {
-        setFilterByPersonal(location.pathname === '/personal')
-    }, [location]);
-
-    useEffect(() => {
-        const projects = ProjectList.filter(project => {
-            // check if ALL the project tags are included in the filterList
-            const matchesFilters = filterList.every(tag =>
-                project.tags.includes(tag)
-            );
-            // also check if project's personal bool matches filterByPersonal
-            const isAHit = matchesFilters && (filterByPersonal ? project.personal === true : true);
-            return isAHit;
-        });
-        setProjectList(projects);
-    }, [filterList, filterByPersonal]);
 
     return (
         <ProjectsMasonry projectList={projectList} />

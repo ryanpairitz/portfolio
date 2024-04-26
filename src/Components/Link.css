@@ -1,9 +1,0 @@
-.link-container {
-    display: inline-block;
-}
-
-.link-text {
-    will-change: 'transform, opacity';
-    display: flex;
-    justify-content: space-between;
-}

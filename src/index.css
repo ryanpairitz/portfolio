@@ -8,11 +8,19 @@
   --spruce: #101111;
   --green-parakeet: #1a6653;
   --cool-neutral: #F5F0D3;
+  
+  --text-primary: #282828;
+  --text-secondary: #535353;
 }
 
 html, body {
-  font-size: 30.6px;
-  color: var(--cool-neutral);
+  /* Regular */
+  font-family: "Mozaic HUM Variable";
+  color: var(--text-primary, #282828);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 388;
+  line-height: 26px; /* 162.5% */
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -27,6 +35,12 @@ body {
   background-color: var(--forest);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul {
   padding: 0;
+  list-style: none;
 }
