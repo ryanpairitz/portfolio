@@ -26,7 +26,7 @@ const About = () => {
                                 <b>&#41;</b>
                             </AnimatedLink>
                             ,</NoWrap>
-                        &nbsp;a designer, software developer, and animator. I specialize in user experience, frontend development, and design, and I have been doing freelance work since I was 14.
+                        &nbsp;a visual and motion designer and software engineer. I specialize in user experience and visual design, and I have been doing freelance work since I was 14.
                     </AnimatedP>
                     <AnimatedP>
                         A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
@@ -65,7 +65,7 @@ const About = () => {
                                 ivi
                             </AnimatedLink>
                             ,</NoWrap>
-                        &nbsp;earned a place in the 2022 Race to Revenue startup incubator cohort.
+                        &nbsp;was among the top 5% of Notre Dame ventures to earn a place in the 2022 Race to Revenue startup incubator cohort.
                     </AnimatedP>
                     <AnimatedP>
                         When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or watching the game.

@@ -177,7 +177,7 @@ export const ProjectList = {
         coverImg: <img src={CoverVinal} alt="The Vinal logo above the slogan, &#8220;You, in music.&#8221; The graphic overlays the grooves of a vinyl record." />,
         title: "Vinal (Brand Guide)",
         description: "Brand guidelines for Vinal, a dapp used to express yourself through — and be rewarded for — the records you collect",
-        role: "UI/UX Designer & Developer, Director of Branding",
+        role: "UI/UX Designer & Engineer, Director of Branding",
         timeframe: "February 2023 - April 2023",
         tags: [
             "graphic design",
