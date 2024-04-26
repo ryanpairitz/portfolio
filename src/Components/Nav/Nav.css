@@ -1,6 +1,7 @@
 .header-nav-container {
     display: flex;
-    width: 1220px;
+    max-width: 1220px;
+    width: 100%;
     padding: 66px 34px 21px 34px;
     justify-content: space-between;
     align-items: center;
