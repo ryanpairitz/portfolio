@@ -19,7 +19,7 @@ const Header = () => {
             <div className="hero-row-2">
                 <h1 className="hero-col-1">I design solutions* tailored for humans</h1>
                 <div className="hero-col-2">
-                    <p>For a number of products and solutions, design is dismissed as a luxury, not an essential. However, design is the product. The best ones are the result of conscious design, focused on connecting to us as people. That’s why my process is centered around people.</p>
+                    <p className="small">For a number of products and solutions, design is dismissed as a luxury, not an essential. However, design is the product. The best ones are the result of conscious design, focused on connecting to us as people. That’s why my process is centered around people.</p>
                 </div>
             </div>
         </div>

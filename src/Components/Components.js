@@ -25,9 +25,9 @@ const Components = () => {
                     <Route index element={<Projects />} />
                     <Route path="projects" element={<Projects />} />
                     <Route path="personal" element={<Projects />} />
-                    <Route path="about" element={<About />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
+                <Route path="about" element={<About />} />
                 <Route path="/project/:id" element={<ProjectDetails />} />
             </Routes>
             </div>

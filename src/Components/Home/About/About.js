@@ -1,25 +1,35 @@
 import "./About.css";
 import AnimatedP from "../../AnimatedP";
 import AnimatedSection from "../../AnimatedSection";
+import Headshot from "../Header/ryanpairitz-headshot.jpg";
+
+const Contents = [
+    "I'm a product & experience designer bridging the gap between design and development. With a background in freelance graphic design and a bachelor's degree in Computer Science & Engineering from the University of Notre Dame, I bring a unique blend of creative and technical expertise to the table, making product handoffs especially seamless. This rare skillset also allows me to quickly ship a wide variety of high-quality projects I’ve both designed and developed — such as this portfolio.",
+    "I’ve always had an appreciation for aesthetics, but it was during my time at Notre Dame working on award-winning software projects and ivi — a networking app I created and member of the 2022 Race to Revenue cohort — that I realized the pivotal role design plays in business success and social impact. I learned the best products don’t undervalue design as the icing on top of the cake; instead, thoughtful, deliberate design is baked in, ensuring the product successfully addresses our needs as humans.",
+    "As a designer and SWE who spends far too much time in front of a screen (by trade) in an increasingly digitized world, I’m driven by what is real. My approach is firmly grounded in consciously reframing a product’s potential consumers or users as real people — real people, who have real problems, which present real opportunities. I genuinely believe this reminder can help to not only create functional products, but to foster meaningful connections between people and innovative solutions they’ll want to adopt.",
+    "When I’m offline, you can find me on the golf course, hitting the gym, plucking away at my guitar, building things, delving into existentialist philosophy, or painting commissioned murals. Or, I’m watching the game: I'm an avid supporter of Notre Dame athletics, as well as a major Cubs, Bears, and Bucks fan.",
+    "I’m most interested in dignifying all users as people behind screens and building solutions that truly solve our problems, rather than vye for our ever-diminishing attention. Life’s to be lived, so let’s make living easier and more enjoyable, not more noisy. If this sounds like something you’d be interested in, send me a message!",
+    "Don’t have any design needs at the moment? Ask me what I think about what’s going on within the Bears organization or how Arendt’s take on post-space race innovation relates to Camus’ suggestions for how to lead a satisfactory life. Or ask what albums I recommend on vinyl (you’ll find I have a very wide-ranging taste in music).",
+];
 
 // const NoWrap = (props) => <span style={{ whiteSpace: "nowrap" }} {...props} />
 const About = () => {
     return (
-        <AnimatedSection>
-            <AnimatedP>Hi I'm Ryan Pairitz, a visual and motion designer and software engineer. I specialize in user experience and visual design, and I have been doing freelance work since I was 14.
-            </AnimatedP>
-            <AnimatedP>
-                A '22 grad, I studied Computer Science &#38; Engineering at the University of Notre Dame, where I was selected to serve as a designer for&nbsp;
-                — the highest-selling piece of collegiate apparel in the nation.
-            </AnimatedP>
-            <AnimatedP>
-                I have designed and developed multiple apps for web or mobile. One of which,&nbsp;
-                was granted an award by the University of Notre Dame. Another app,&nbsp;
-                was among the top 5% of Notre Dame ventures to earn a place in the 2022 Race to Revenue startup incubator cohort.
-            </AnimatedP>
-            <AnimatedP>
-                When I'm not designing or coding, I'm often playing guitar, writing music, at the gym, or watching the game.
-            </AnimatedP>
+        <AnimatedSection className="about">
+            <div className="col-1">
+                {/* <img src={Headshot}
+                    className="headshot"
+                    alt="Ryan Pairitz smiling, standing for a studio portrait in front of a beige backdrop, wearing a cream sweater." /> */}
+            </div>
+            <div className="col-2">
+                <div>
+                <h2>How about an introduction? I’ll start.</h2>
+                <h1>I’m Ryan Pairitz.</h1>
+                </div>
+                {Contents.map((item,index) => (
+                    <AnimatedP key={index}>{item}</AnimatedP>
+                ))}
+            </div>
         </AnimatedSection>
     );
 };
