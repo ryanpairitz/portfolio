@@ -1,3 +1,11 @@
+.App {
+  display: flex;
+  max-width: 1220px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
 h1,
 h2 {
   color: var(--text-primary, #282828);
@@ -20,7 +28,6 @@ h2 {
   /* 127.907% */
 }
 
-
 h4 {
   color: var(--text-secondary, #525252);
 
@@ -32,4 +39,24 @@ h4 {
   line-height: 16px;
   /* 145.455% */
   letter-spacing: 0.381px;
+}
+
+p {
+  color: var(--text-secondary, #525252);
+
+  /* Small */
+  font-family: "Mozaic HUM Variable";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 457;
+  line-height: 16px;
+  /* 145.455% */
+  letter-spacing: 0.381px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 144px 0px;
 }
