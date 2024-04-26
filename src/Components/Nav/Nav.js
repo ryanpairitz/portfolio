@@ -1,7 +1,9 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useLayoutEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Brandmark from "./Brandmark";
+import "./Nav.css";
+import AnimatedLink from "../AnimatedLink";
 
 const Nav = () => {
     const scalar = 1.0557;
@@ -13,7 +15,7 @@ const Nav = () => {
     useLayoutEffect(() => {
         // check if either in main view or in project details;
         // switching from either to the other should trigger animations
-        setIsHome(!location.pathname.includes("project"));
+        setIsHome(!location.pathname.includes("project") && !location.pathname.includes("about"));
         // track if the history stack is empty (i.e. if current route was loaded
         // on initial page load), so animated items won't transition from out of
         // nowhere; instead, animations are triggered only by internal location change.
@@ -55,14 +57,20 @@ const Nav = () => {
     };
 
     return (
+        <div className="header-nav-container">
             <animated.div
                 className="logo-container"
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
                 onClick={scrollToTop}
                 style={logoStyle}>
-                <Brandmark className="brandmark"/>
+                <Brandmark className="brandmark" />
             </animated.div>
+            <nav>
+                <AnimatedLink to="/">Portfolio</AnimatedLink>
+                <AnimatedLink to="about">About</AnimatedLink>
+            </nav>
+        </div>
     );
 };
 

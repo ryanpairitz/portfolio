@@ -1,0 +1,27 @@
+.header-nav-container {
+    display: flex;
+    width: 1220px;
+    padding: 66px 34px 21px 34px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.logo-container {
+    cursor: pointer;
+    width: 44.499px;
+    height: 40.173px;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+nav>* {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

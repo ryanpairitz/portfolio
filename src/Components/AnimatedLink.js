@@ -4,7 +4,7 @@ import { animated, useSpring } from "@react-spring/web";
 
 const AnimatedReactLink = animated(Link);
 
-const AnimatedLink = ({ label, to, href, state }) => {
+const AnimatedLink = ({ label, to, href, state, children }) => {
     const [active, setActive] = useState(false);
     const linkStyle = useSpring({
         to: {
@@ -23,7 +23,7 @@ const AnimatedLink = ({ label, to, href, state }) => {
                     className="link-text"
                     href={href}
                     target="_blank" rel="noopener noreferrer"
-                >{label}
+                >{label ? label : children}
                 </animated.a> :
                 <AnimatedReactLink style={linkStyle}
                     onMouseEnter={() => setActive(true)}
@@ -32,7 +32,7 @@ const AnimatedLink = ({ label, to, href, state }) => {
                     to={to}
                     state={state}
                 >
-                    {label}
+                    {label ? label : children}
                 </AnimatedReactLink>
             }
         </>
