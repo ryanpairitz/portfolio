@@ -16,11 +16,11 @@ const Contents = [
 const About = () => {
     return (
         <AnimatedSection className="about">
-            <div className="col-1">
-                {/* <img src={Headshot}
-                    className="headshot"
-                    alt="Ryan Pairitz smiling, standing for a studio portrait in front of a beige backdrop, wearing a cream sweater." /> */}
-            </div>
+            {/* <div className="col-1"> */}
+                <img src={Headshot}
+                    className="col-1 headshot"
+                    alt="Ryan Pairitz smiling, standing for a studio portrait in front of a beige backdrop, wearing a cream sweater." />
+            {/* </div> */}
             <div className="col-2">
                 <div>
                 <h2>How about an introduction? I’ll start.</h2>

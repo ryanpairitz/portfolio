@@ -32,7 +32,7 @@ h4 {
   color: var(--text-secondary, #525252);
 
   /* Small */
-  font-family: "Mozaic HUM Variable";
+  font-family: "Mozaic HUM Variable", "mozaic-hum-variable", sans-serif;
   font-size: 11px;
   font-style: normal;
   font-weight: 388;
@@ -45,7 +45,7 @@ h4 {
   color: var(--text-secondary, #525252);
 
   /* Small */
-  font-family: "Mozaic HUM Variable";
+  font-family: "Mozaic HUM Variable", "mozaic-hum-variable", sans-serif;
   font-size: 11px;
   font-style: normal;
   font-weight: 457;

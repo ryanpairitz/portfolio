@@ -1,4 +1,5 @@
 .header-nav-container {
+    box-sizing: border-box;
     display: flex;
     max-width: 1220px;
     width: 100%;
@@ -21,8 +22,17 @@ nav {
     gap: 55px;
 }
 
-nav>* {
+.nav-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
+}
+
+.nav-item svg {
+    position: absolute;
+    bottom: -5px;
+    width: 5px;
+    height: 5px;
+    fill: var(--color-brand-green-normal, #28B861);
 }

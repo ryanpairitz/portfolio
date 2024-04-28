@@ -1,7 +1,6 @@
 import {
     Route,
     Routes,
-    useLocation
 } from "react-router-dom";
 import Footer from "./Footer";
 import About from "./Home/About/About";

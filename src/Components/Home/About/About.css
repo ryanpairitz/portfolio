@@ -14,15 +14,16 @@
     display: flex;
     height: 843px;
     max-width: 466px;
-    padding: 21px 34px;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     flex: 1 0 0;
     border-radius: 17px;
-    background: url(../Header/ryanpairitz-headshot.jpg) lightgray 50% / cover no-repeat;
+    /* background: url(../Header/ryanpairitz-headshot.jpg) lightgray 50% / cover no-repeat; */
     position: sticky;
     top: 0;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .about>.col-2 {

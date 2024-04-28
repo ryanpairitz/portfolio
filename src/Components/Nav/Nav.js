@@ -1,9 +1,9 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useLayoutEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Brandmark from "./Brandmark";
 import "./Nav.css";
-import AnimatedLink from "../AnimatedLink";
+import AnimatedNavLink from "../AnimatedNavLink";
 
 const Nav = () => {
     const scalar = 1.0557;
@@ -67,8 +67,12 @@ const Nav = () => {
                 <Brandmark className="brandmark" />
             </animated.div>
             <nav>
-                <AnimatedLink to="/">Portfolio</AnimatedLink>
-                <AnimatedLink to="about">About</AnimatedLink>
+                <AnimatedNavLink to="/"
+                    className="nav-item">Portfolio
+                </AnimatedNavLink>
+                <AnimatedNavLink to="/about"
+                    className="nav-item">About
+                </AnimatedNavLink>
             </nav>
         </div>
     );

@@ -21,7 +21,7 @@ html {
 html,
 body {
   /* Regular */
-  font-family: "Mozaic HUM Variable";
+  font-family: "Mozaic HUM Variable", "mozaic-hum-variable", sans-serif;
   color: var(--text-primary, #282828);
   font-size: 16px;
   font-style: normal;
