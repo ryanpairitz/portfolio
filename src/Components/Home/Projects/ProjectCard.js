@@ -30,8 +30,8 @@ const ProjectCard = ({ project }) => {
             <animated.div className="card-img" >
                 {project.cardImg}
             </animated.div>
-            <animated.div className="card-content" style={contentStyle}>
-                <div className="logo">{project.title}</div>
+            <animated.div className={[((project.id === "notre-dame-the-shirt-2020" || project.id === "vinal-brand-guide") && "inverted" ),"card-content"].join(" ")} style={contentStyle}>
+                {project.title}
             </animated.div>
         </AnimatedLink>
     );

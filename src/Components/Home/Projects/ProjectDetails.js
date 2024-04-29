@@ -111,7 +111,7 @@ export const ProjectList = {
             },
         ],
     },
-    2: {
+    "vinal-brand-guide": {
         coverImg: <img src={CoverVinal} alt="The Vinal logo above the slogan, &#8220;You, in music.&#8221; The graphic overlays the grooves of a vinyl record." />,
         title: "Vinal (Brand Guide)",
         details: [
@@ -136,7 +136,7 @@ export const ProjectList = {
             "Collecting vinyl records is a way music lovers can show their dedication to their favorite albums and artists. But what if there were a way that they could earn exclusive perks from musicians by buying and trading their records digitally? What if artists could also make more money from their record sales? That's the mission of Vinal.",
         ],
     },
-    3: {
+    "partake": {
         coverImg: <img src={CoverPartake} alt="The Partake logo above the slogan, &#8220;Make friends by doing.&#8221; To the left is an iPhone on the main view of the Partake app, portraying a user's profile card, which shows their name, bio, common interests, and an option to &#8220;Recruit&#8221; them, and to the right is an iPhone demonstrating the chat feature." />,
         title: "Partake",
         details: [

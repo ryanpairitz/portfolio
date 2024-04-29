@@ -1,7 +1,7 @@
 .list {
     position: relative;
     width: 100%;
-    font-size: calc(34px * 0.9);
+    /* font-size: calc(34px * 0.9); */
 }
 
 .list,
@@ -13,21 +13,39 @@
     box-sizing: border-box;
 }
 
+.list a {
+    text-decoration: underline;
+}
+
 .list>div {
     position: absolute;
     will-change: transform, width, height, opacity;
-    padding: 0.5em;
+    padding: 0px 10.5px 34px;
+    
+    display: flex;
+    width: 233px;
+    min-width: 144px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.list .description {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 17px;
+    gap: 8px;
 }
 
 .list>div>a {
     position: relative;
-    display: block;
-    background-size: cover;
-    background-position: center center;
+    /* display: block; */
+    /* background-size: cover; */
+    /* background-position: center center; */
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: calc(10.5em / 34);
+    border-radius: 17px;
     box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,6 +53,12 @@
     position: absolute;
     height: 100%;
     width: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-img>svg {
@@ -48,13 +72,23 @@
 .card-content {
     position: absolute;
     width: 100%;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0.618em;
-    gap: 0.618em
+    /* display: flex;
+    height: 100%;
+    padding: 26px 34px;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch; */
+    top: 26px;
+    left: 34px;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+    /* padding: 0.618em;
+    gap: 0.618em */
+}
+
+.card-content.inverted {
+    color: white;
 }
 
 .card-content>.logo {

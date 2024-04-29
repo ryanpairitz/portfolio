@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
+import AnimatedLink from "../../AnimatedLink";
 
 function useMedia(queries, values, defaultValue) {
     const match = () => values[queries.findIndex(q => matchMedia(q).matches)] || defaultValue;
@@ -48,6 +49,10 @@ const ProjectsMasonry = ({ projectList }) => {
             {transitions((style, project) => (
                 <animated.div style={style}>
                     <ProjectCard project={project}/>
+                    <div className="description">
+                        {project.description}
+                        <AnimatedLink to={`/project/${project.id}`}>{project.link?.label}</AnimatedLink>
+                    </div>
                 </animated.div>
             ))}
         </div>
