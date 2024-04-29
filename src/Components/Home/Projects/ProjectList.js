@@ -1,4 +1,4 @@
-import { animated, useTransition } from "@react-spring/web";
+import { animated, useChain, useSpring, useSpringRef, useTransition } from "@react-spring/web";
 import { useEffect, useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
 import ProjectCard from "./ProjectCard";
@@ -17,7 +17,7 @@ function useMedia(queries, values, defaultValue) {
     return value;
 }
 
-const ProjectsMasonry = ({ projectList }) => {
+const ProjectsList = ({ projectList }) => {
     // tie media queries to the number of columns
     const columns = useMedia(['(min-width: 2000px)', '(min-width: 1500px)', '(min-width: 1078px)'], [4, 3, 2], 1);
     // measure the width of the container element
@@ -33,8 +33,10 @@ const ProjectsMasonry = ({ projectList }) => {
         });
         return [heights, gridItems];
     }, [columns, projectList, width]);
+    const transRef = useSpringRef();
     // turn the static grid values into animated transitions, any addition, removal or change will be animated
     const transitions = useTransition(gridItems, {
+        ref: transRef,
         key: (project) => project.id,
         from: ({ x, y, width, height }) => ({ x, y, width, height, opacity: 0, scale: 0 }),
         enter: ({ x, y, width, height }) => ({ x, y, width, height, opacity: 1, scale: 1 }),
@@ -43,20 +45,34 @@ const ProjectsMasonry = ({ projectList }) => {
         config: { mass: 5, tension: 500, friction: 100 },
         trail: 25,
     });
+    const springRef = useSpringRef();
+    const springStyle = useSpring({
+        ref: springRef,
+        from: {
+            opacity: 0,
+            y: -144,
+        },
+        to: {
+            opacity: 1,
+            y: 0,
+        }
+    });
+
+    useChain([transRef, springRef],[0,1],500);
 
     return (
-        <div ref={ref} className="list" style={{ height: Math.max(...heights) }}>
+        <div ref={ref} className="normal list" style={{ height: Math.max(...heights) }}>
             {transitions((style, project) => (
                 <animated.div style={style}>
                     <ProjectCard project={project}/>
-                    <div className="description">
+                    <animated.div style={springStyle} className="description">
                         {project.description}
                         <AnimatedLink to={`/project/${project.id}`}>{project.link?.label}</AnimatedLink>
-                    </div>
+                    </animated.div>
                 </animated.div>
             ))}
         </div>
     );
 };
 
-export default ProjectsMasonry;
+export default ProjectsList;

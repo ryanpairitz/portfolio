@@ -169,6 +169,69 @@ export const ProjectList = {
             "There’s a stigma attached to online dating, but there’s certainly a greater one surrounding finding friends online. Partake's social platform aims to solve that problem by allowing users to find friends IRL by participating in their favorite hobbies. Before starting the development process with my team, I followed a user-centric product development cycle to design a prototype — to ensure our solution adequately allows users to not only find others with common interests, but also discover events at which they can exercise those interests."
         ],
     },
+    "pruun": {
+        title: "Pruun",
+        details: [
+            // {
+            //     category: "Description",
+            //     value: "Partake is an app for finding friends by participating in common hobbies",
+            // },
+            {
+                category: "Timeframe",
+                value: "October 2023 - Present",
+            },
+            {
+                category: "Role",
+                value: "Product Designer & Engineer, Brand Strategist & Designer",
+            },
+            {
+                category: "Team",
+                value: "Joe Fuchs, Joseph Neus, Brannon Peterkin",
+            },
+            {
+                category: "Recognition",
+                value: "2nd place in University of Dayton Pitch Competition ($15,000 award), 2024",
+            },
+        ],
+        link: {
+            label: "Request case study",
+            href: "mailto:ryn.pair@me.com?subject=Access request for Pruun case study&body=Hi Ryan,%0D%0A%0D%0AUpon reviewing your portfolio, I'm interested in learning more about your work on Pruun.",
+        },
+        overview: [
+            "For homeowners and property managers, finding trusted landscaping contractors can be difficult, especially with limited quality assurance. Even more of a problem, property managers in charge of numerous properties have to manually track their schedule, quotes, projects, invoices, and payments for each location, which can become messy very quickly. Additionally, on the contractor side, administrative processes such as quoting, scheduling, communicating with prospects or clients, invoicing, etc. are all incredibly manual, costly, and time consuming.",
+            "Using Pruun, homeowners and property managers alike can instantly request a range of landscaping services for any number of properties from Pruun’s network of vetted pros, who can provide estimates in the app without ever having to physically go to the inquirer’s property. For any confirmed services, clients then receive updates regarding the project status and are notified when to pay, effectively streamlining all administrative tasks for landscaping pros.",
+        ],
+    },
+    "slate": {
+        title: "Slate",
+        details: [
+            // {
+            //     category: "Description",
+            //     value: "Partake is an app for finding friends by participating in common hobbies",
+            // },
+            {
+                category: "Timeframe",
+                value: "April 16 - 19, 2024",
+            },
+            {
+                category: "Role",
+                value: "Product Designer",
+            },
+            {
+                category: "Team",
+                value: "Mike Joslin, Akshay Singhal, Sarah Chumbley",
+            },
+        ],
+        link: {
+            label: "Request case study",
+            href: "mailto:ryn.pair@me.com?subject=Access request for Slate case study&body=Hi Ryan,%0D%0A%0D%0AUpon reviewing your portfolio, I'm interested in learning more about your work on Slate.",
+        },
+        overview: [
+            "In many industries such as manufacturing, healthcare, or retail, there is a major problem: There is increasingly high demand for frontline workers, coupled with very low employee retention, and the supply of workers for related roles is ever diminishing. This is largely because entry-level roles are becoming less desirable, job postings are being unnecessarily inflated with preferences masked as requirements, and potential entrants aren’t even made aware of how to receive proper training, causing the current workforce to age out faster than it can be replaced.",
+            "To make matters worse, often when workers are dislocated (i.e. laid off at no fault of their own), they have trouble quickly finding a new job that fits their needs, just to help them get back on their feet and out of survival mode. Many don’t know how to write an effective resume or highlight their experience or skills that could help them get a job, and case managers at workforce development programs are so under-equipped and outnumbered by jobseekers (50-100:1) that they rely on Google and guesswork when helping them draft their resumes. For a similar reason, even if case managers help them find a role, workers usually aren’t adequately informed of the possible ways they could ascend along a career path. Instead, they end up floating around between dead-end jobs, or — at best — they remain stagnant, often on the brink of poverty.",
+            "In a one-week sprint coordinated to address these issues, we created Slate. Slate is a web app targeted at helping workers identify their transferable skills based on relevant role requirements, unlocking opportunities that may have otherwise been unclear to them, and simultaneously reducing guesswork for case workers, who can efficiently find work for the under- or un-employed, allocate training resources for workers, and help employers place talent in their hardest-to-fill roles.",
+        ],
+    },
 }
 
 const ProjectDetails = () => {
@@ -177,11 +240,11 @@ const ProjectDetails = () => {
 
     return (
         <article className="details-container">
-            <AnimatedDiv className="cover-container">
-                <div className="cover-img">
+            {project.coverImg &&
+                <AnimatedDiv className="cover-container">
                     {project.coverImg}
-                </div>
-            </AnimatedDiv>
+                </AnimatedDiv>
+            }
             <AnimatedDiv className="header">
                 <h2>{project.title}</h2>
             </AnimatedDiv>

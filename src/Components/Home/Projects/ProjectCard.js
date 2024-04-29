@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
     const contentStyle = useSpring({
         to: {
             opacity: !hovering ? 1 : 0,
-            y: !hovering ? 0 : 89
+            y: !hovering ? 0 : -89
         },
     });
 
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
             <animated.div className="card-img" >
                 {project.cardImg}
             </animated.div>
-            <animated.div className={[((project.id === "notre-dame-the-shirt-2020" || project.id === "vinal-brand-guide") && "inverted" ),"card-content"].join(" ")} style={contentStyle}>
+            <animated.div className={[((project.id === "notre-dame-the-shirt-2020" || project.id === "vinal-brand-guide" || project.id === "pruun") && "inverted" ),"card-content"].join(" ")} style={contentStyle}>
                 {project.title}
             </animated.div>
         </AnimatedLink>
