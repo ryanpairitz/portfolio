@@ -43,3 +43,10 @@
     /* gap: 13px; */
     align-self: stretch;
 }
+
+.about>.col-2>p:last-child {
+    color: var(--text-secondary, #525252);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.381px;
+}
