@@ -13,7 +13,7 @@ const AnimatedP = ({ className, style, children }) => {
       },
     }),
     {
-      rootMargin: '-5% 0%',
+      rootMargin: '5% 0%',
       once: true
     }
   );

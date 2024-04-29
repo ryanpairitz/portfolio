@@ -4,13 +4,21 @@ import { animated, useSpring } from "@react-spring/web";
 
 const AnimatedReactLink = animated(Link);
 
-const AnimatedLink = ({ label, to, href, state, className, children }) => {
+const AnimatedLink = ({ label, to, href, state, className, inverted, children }) => {
     const [hovering, setHovering] = useState(false);
-    const linkStyle = useSpring({
-        to: {
-            fontWeight: hovering ? 1016 : 388
-        },
-    });
+    const linkStyle = useSpring(inverted ?
+        {
+            to: {
+                fontWeight: hovering ? 388 : 1016
+            },
+        }
+        :
+        {
+            to: {
+                fontWeight: hovering ? 1016 : 388
+            },
+        }
+    );
 
     return (
         <>

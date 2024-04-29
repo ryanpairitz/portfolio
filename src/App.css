@@ -28,6 +28,12 @@ h2 {
   /* 127.907% */
 }
 
+h3 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 1 628;
+}
+
 h4 {
   color: var(--text-secondary, #525252);
 
@@ -35,7 +41,7 @@ h4 {
   font-family: "Mozaic HUM Variable", "mozaic-hum-variable", sans-serif;
   font-size: 11px;
   font-style: normal;
-  font-weight: 388;
+  font-weight: inherit;
   line-height: 16px;
   /* 145.455% */
   letter-spacing: 0.381px;
@@ -59,4 +65,9 @@ h4 {
   flex-direction: column;
   gap: 24px;
   padding: 144px 0px;
+  max-width: 1220px;
+}
+
+.link {
+  text-decoration: underline;
 }

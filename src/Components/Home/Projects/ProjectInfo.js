@@ -1,19 +1,17 @@
 import AnimatedLink from "../../AnimatedLink";
 
-const ProjectInfo = ({ title, detail, href, underlineColor }) => {
+const ProjectInfo = ({ title, detail, href }) => {
     return (
         <div className="info">
-            <h3>
+            <h4>
                 {title}
-            </h3>
-            <h2>
-                {href ?
-                    <AnimatedLink href={href} underlineColor={underlineColor}>
-                        {detail}
-                    </AnimatedLink>
-                    :
-                    detail}
-            </h2>
+            </h4>
+            {href ?
+                <AnimatedLink href={href} className="link">
+                    {detail}
+                </AnimatedLink>
+                :
+                detail}
         </div>
     );
 };

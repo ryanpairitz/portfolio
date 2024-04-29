@@ -1,6 +1,6 @@
 import { useInView, animated } from '@react-spring/web';
 
-const AnimatedSection = ({ className, style, children }) => {
+const AnimatedDiv = ({ className, style, children }) => {
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -13,15 +13,15 @@ const AnimatedSection = ({ className, style, children }) => {
       },
     }),
     {
-      rootMargin: '0% 0%',
+      rootMargin: '-5% 0%',
       once: true
     }
   );
   return (
-    <animated.section ref={ref} style={{ ...style, ...springs }} className={className}>
+    <animated.div ref={ref} style={{ ...style, ...springs }} className={className}>
       {children}
-    </animated.section>
+    </animated.div>
   );
 };
 
-export default AnimatedSection;
+export default AnimatedDiv;
