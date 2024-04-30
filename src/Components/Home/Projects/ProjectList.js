@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
-import AnimatedLink from "../../AnimatedLink";
+import ProjectPreview from "./ProjectPreview";
 
 function useMedia(queries, values, defaultValue) {
     const match = () => values[queries.findIndex(q => matchMedia(q).matches)] || defaultValue;
@@ -28,8 +28,8 @@ const ProjectsList = ({ projectList }) => {
         let gridItems = projectList.map((project, i) => {
             const column = heights.indexOf(Math.min(...heights)); // Basic masonry-grid placing, puts tile into the smallest column using Math.min
             const x = (width / columns) * column; // x = container width / number of columns * column index,
-            const y = (heights[column] += project.height / 2) - project.height / 2; // y = it's just the height of the current column
-            return { ...project, x, y, width: width / columns, height: project.height / 2 };
+            const y = (heights[column] += project.height) - project.height; // y = it's just the height of the current column
+            return { ...project, column, x, y, width: width / columns, height: project.height };
         });
         return [heights, gridItems];
     }, [columns, projectList, width]);
@@ -37,13 +37,13 @@ const ProjectsList = ({ projectList }) => {
     // turn the static grid values into animated transitions, any addition, removal or change will be animated
     const transitions = useTransition(gridItems, {
         ref: transRef,
-        key: (project) => project.id,
-        from: ({ x, y, width, height }) => ({ x, y, width, height, opacity: 0, scale: 0 }),
-        enter: ({ x, y, width, height }) => ({ x, y, width, height, opacity: 1, scale: 1 }),
+        key: (project) => project.id, // for some reason this causes widths and x&y to animate; otherwise, can see destruct of each before mount, unless remove leave opt below
+        from: { opacity: 0, scale: 1.382 },
+        enter: { opacity: 1, scale: 1 },
         update: ({ x, y, width, height }) => ({ x, y, width, height }),
         leave: { scale: 0, opacity: 0 },
-        config: { mass: 5, tension: 500, friction: 100 },
-        trail: 25,
+        config: { mass: 3, tension: 610, friction: 144 },
+        trail: (377 + 144) / gridItems.length,
     });
     const springRef = useSpringRef();
     const springStyle = useSpring({
@@ -57,18 +57,15 @@ const ProjectsList = ({ projectList }) => {
             y: 0,
         }
     });
-
-    useChain([transRef, springRef],[0,1],500);
+    useChain([transRef, springRef], [0, 1], 377);
 
     return (
         <div ref={ref} className="normal list" style={{ height: Math.max(...heights) }}>
             {transitions((style, project) => (
-                <animated.div style={style}>
-                    <ProjectCard project={project}/>
-                    <animated.div style={springStyle} className="description">
-                        {project.description}
-                        <AnimatedLink to={`/project/${project.id}`}>{project.link?.label}</AnimatedLink>
-                    </animated.div>
+                <animated.div style={{ ...style, width: project.width, height: project.height, x: project.x, y: project.y, paddingLeft: project.column === 0 && "0px", paddingRight: project.column === 1 && "0px" }}>
+                    <ProjectCard project={project} />
+                    <ProjectPreview to={`/project/${project.id}`} cta={project.link?.label}
+                    style={springStyle}>{project.description}</ProjectPreview>
                 </animated.div>
             ))}
         </div>

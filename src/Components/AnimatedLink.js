@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { animated, useSpring } from "@react-spring/web";
 
 const AnimatedReactLink = animated(Link);
 
-const AnimatedLink = ({ label, to, href, state, className, inverted, children }) => {
+const AnimatedLink = ({ label, to, href, state, className, inverted, hoveringOnParent, children }) => {
     const [hovering, setHovering] = useState(false);
     const linkStyle = useSpring(inverted ?
         {
@@ -20,13 +20,17 @@ const AnimatedLink = ({ label, to, href, state, className, inverted, children })
         }
     );
 
+    useEffect(() => {
+        setHovering(hoveringOnParent);
+    }, [hoveringOnParent])
+
     return (
         <>
             {href ?
                 <animated.a style={linkStyle}
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => setHovering(false)}
-                    className={className + " link-text"}
+                    onMouseEnter={() => hoveringOnParent == null && setHovering(true)}
+                    onMouseLeave={() => hoveringOnParent == null && setHovering(false)}
+                    className={className + " link"}
                     href={href}
                     target="_blank" rel="noopener noreferrer"
                 >
@@ -35,9 +39,9 @@ const AnimatedLink = ({ label, to, href, state, className, inverted, children })
                 </animated.a>
                 :
                 <AnimatedReactLink style={linkStyle}
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => setHovering(false)}
-                    className={className + " link-text"}
+                    onMouseEnter={() => hoveringOnParent == null && setHovering(true)}
+                    onMouseLeave={() => hoveringOnParent == null && setHovering(false)}
+                    className={className + " link"}
                     to={to}
                     state={state}
                 >

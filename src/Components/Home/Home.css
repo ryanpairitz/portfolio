@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    max-width: 699px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.hero-container {
+    display: flex;
+    max-width: 699px;
+    padding: 0px 34px;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+    align-self: stretch;
+    padding-bottom: 89px;
+}

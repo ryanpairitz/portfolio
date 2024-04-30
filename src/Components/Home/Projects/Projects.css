@@ -14,31 +14,28 @@
     box-sizing: border-box;
 }
 
-.list a {
-    text-decoration: underline;
-}
-
 .list>div {
     position: absolute;
     will-change: transform, width, height, opacity;
-    padding: 0px 10.5px 34px;
+    padding: 0px 10.5px 55px;
     
     display: flex;
     width: 233px;
     min-width: 144px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 13px;
+    gap: 21px;
 }
 
-.list .description {
+.preview {
     display: flex;
     flex-direction: column;
-    padding: 0px 17px;
+    padding: 0px 17px 0px;
     gap: 8px;
+    cursor: pointer;
 }
 
-.list>div>a {
+.card {
     position: relative;
     display: block;
     background-size: cover;
@@ -94,7 +91,7 @@
     color: white;
 }
 
-.card-content>.logo {
+/* .card-content>.logo {
     display: block;
     line-height: 0;
 }
@@ -106,7 +103,7 @@
 .card-content>.logo>svg#the-shirt,
 svg#vinal {
     height: 1.618em;
-}
+} */
 
 /* .details-container>div:not(.line-container) {
     margin-bottom: calc(89rem / 34);

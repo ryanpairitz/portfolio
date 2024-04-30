@@ -24,6 +24,7 @@ const ProjectCard = ({ project }) => {
             state={{ theme: project.theme }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
+            className="card"
             style={{
                 ...cardStyle,
             }}>

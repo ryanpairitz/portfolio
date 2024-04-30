@@ -71,3 +71,7 @@ h4 {
 .link {
   text-decoration: underline;
 }
+
+.nav-link {
+  text-decoration: none;
+}

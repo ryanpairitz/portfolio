@@ -22,7 +22,7 @@ const AnimatedNavLink = ({ label, to, className, children }) => {
         <AnimatedReactNavLink style={linkStyle}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={className + " link-text"}
+            className={className + " link nav-link"}
             to={to}
             end
         >

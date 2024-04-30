@@ -14,7 +14,7 @@ import CardSlate from './slate-mockup.jpg';
 export const ProjectList = [
     {
         id: "pruun",
-        height: 987,
+        height: 610,
         title: "Pruun",
         description: "Designing a SaaS landscaping marketplace and CRM for scale. Won 2nd place and $15,000 at the University of Dayton Pitch Competition.",
         link: {
@@ -27,7 +27,7 @@ export const ProjectList = [
     },
     {
         id: "slate",
-        height: 987,
+        height: 610,
         title: "Slate",
         description: "Targeting poverty by curating opportunities and allocating training resources for low-wage workers, by extracting their transferable skills through conversational AI. This minimizes guesswork for workforce development programs and helps employers place talent in their hardest-to-fill roles.",
         link: {
@@ -40,7 +40,7 @@ export const ProjectList = [
     },
     {
         id: "notre-dame-the-shirt-2020",
-        height: 987,
+        height: 610,
         title: "The Shirt (2020)",
         description: "Designed Notre Dame’s The Shirt, which sells more than 160,000 units per year.",
         link: {
@@ -53,7 +53,7 @@ export const ProjectList = [
     },
     {
         id: "partake",
-        height: 987,
+        height: 610,
         title: "Partake",
         description: "Mobile app for finding friends by participating in common hobbies.",
         link: {
@@ -66,7 +66,7 @@ export const ProjectList = [
     },
     {
         id: "vinal-brand-guide",
-        height: 610,
+        height: 432,
         title: "Vinal",
         description: "Brand guidelines for Vinal, a dApp people can use to express themselves through — and be rewarded for — the records they collect.",
         link: {

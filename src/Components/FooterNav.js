@@ -62,7 +62,7 @@ const FooterNav = () => {
                     <ul>
                         {cat.links.map((item, index) => (
                             <li key={index}>
-                                <AnimatedLink label={item.id} to={item.to} href={item.href} />
+                                <AnimatedLink label={item.id} to={item.to} href={item.href} className="nav-link" />
                             </li>
                         ))}
                     </ul>
