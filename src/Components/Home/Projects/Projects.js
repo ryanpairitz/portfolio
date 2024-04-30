@@ -84,7 +84,9 @@ const Projects = () => {
 
     return (
         // <ProjectsMasonry projectList={projectList} />
-        <ProjectsList projectList={projectList} />
+        // <div className='projects'>
+            <ProjectsList projectList={projectList} />
+        // </div>
     );
 };
 

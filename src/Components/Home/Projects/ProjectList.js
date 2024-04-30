@@ -29,7 +29,8 @@ const ProjectsList = ({ projectList }) => {
             const column = heights.indexOf(Math.min(...heights)); // Basic masonry-grid placing, puts tile into the smallest column using Math.min
             const x = (width / columns) * column; // x = container width / number of columns * column index,
             const y = (heights[column] += project.height) - project.height; // y = it's just the height of the current column
-            return { ...project, column, x, y, width: width / columns, height: project.height };
+            const noPaddingLeft = column % (columns) === 0 || columns == 1;
+            return { ...project, column, noPaddingLeft, x, y, width: width / columns, height: project.height };
         });
         return [heights, gridItems];
     }, [columns, projectList, width]);
@@ -62,10 +63,14 @@ const ProjectsList = ({ projectList }) => {
     return (
         <div ref={ref} className="normal list" style={{ height: Math.max(...heights) }}>
             {transitions((style, project) => (
-                <animated.div style={{ ...style, width: project.width, height: project.height, x: project.x, y: project.y, paddingLeft: project.column === 0 && "0px", paddingRight: project.column === 1 && "0px" }}>
+                <animated.div style={{
+                    ...style, width: project.width, height: project.height, x: project.x, y: project.y,
+                    paddingLeft: project.noPaddingLeft && "0px",
+                    paddingRight: "0px"
+                }}>
                     <ProjectCard project={project} />
                     <ProjectPreview to={`/project/${project.id}`} cta={project.link?.label}
-                    style={springStyle}>{project.description}</ProjectPreview>
+                        style={springStyle}>{project.description}</ProjectPreview>
                 </animated.div>
             ))}
         </div>
