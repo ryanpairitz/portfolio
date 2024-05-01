@@ -27,7 +27,7 @@ const About = () => {
                 <h1>I’m Ryan Pairitz.</h1>
                 </div>
                 {Contents.map((item,index) => (
-                    <AnimatedP key={index} className={index === Contents.length - 1 && "small"}>{item}</AnimatedP>
+                    <AnimatedP key={index} className={index === Contents.length - 1 ? "small" : ""}>{item}</AnimatedP>
                 ))}
             </div>
         </AnimatedSection>
