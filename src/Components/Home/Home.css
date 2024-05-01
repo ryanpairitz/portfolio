@@ -4,26 +4,35 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    /* padding: 0px 34px;
+    box-sizing: border-box; */
     align-self: stretch;
 }
 
-.hero-container {
+.home>* {
     display: flex;
-    max-width: 699px;
     padding: 0px 34px;
     flex-direction: column;
     align-items: center;
-    gap: 55px;
     align-self: stretch;
-    padding-bottom: 89px;
 }
 
 .projects {
-    display: flex;
-    max-width: 699px;
-    padding: 0px 34px;
-    flex-direction: column;
-    align-items: center;
     gap: 24px;
-    align-self: stretch;
+}
+
+@media screen and (max-width: 698px) {
+    .home {
+        max-width: 534px;
+    }
+}
+@media screen and (max-width: 486px) {
+    .home>* {
+        padding: 0px 21px;
+    }
+}
+@media screen and (max-width: 418px) {
+    .home>* {
+        padding: 0px 13px;
+    }
 }

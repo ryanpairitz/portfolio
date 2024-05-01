@@ -36,3 +36,9 @@ nav {
     height: 5px;
     fill: var(--color-brand-green-normal, #28B861);
 }
+
+@media screen and (max-width: 387px) {
+    .header-nav-container {
+        padding: 66px 21px 21px 21px;
+    }
+}

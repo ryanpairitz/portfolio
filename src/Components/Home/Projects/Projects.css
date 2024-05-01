@@ -265,7 +265,13 @@ section>div:first-child {
     height: 100%;
 } */
 
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 418px) {
+    .card-content {
+        left: 21px;
+    }
+}
+
+/* @media screen and (max-width: 855px) {
     .cover-container {
         height: calc(521rem / 34);
     }
@@ -315,4 +321,4 @@ section>div:first-child {
     .cover-container {
         height: calc(466rem / 34);
     }
-}
+} */

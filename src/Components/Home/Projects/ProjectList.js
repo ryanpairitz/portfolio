@@ -4,18 +4,7 @@ import useMeasure from "react-use-measure";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 import ProjectPreview from "./ProjectPreview";
-
-function useMedia(queries, values, defaultValue) {
-    const match = () => values[queries.findIndex(q => matchMedia(q).matches)] || defaultValue;
-    const [value, setValue] = useState(match);
-    useEffect(() => {
-        const handler = () => setValue(match);
-        window.addEventListener('resize', handler);
-        return () => window.removeEventListener('resize', handler);
-        // eslint-disable-next-line
-    }, []);
-    return value;
-}
+import { useMedia } from "../../../Hooks/useMedia";
 
 const ProjectsList = ({ projectList }) => {
     // tie media queries to the number of columns
