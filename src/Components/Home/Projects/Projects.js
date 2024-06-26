@@ -25,19 +25,19 @@ export const ProjectList = [
         private: false,
         personal: false,
     },
-    {
-        id: "slate",
-        height: 610,
-        title: "Slate",
-        description: "Targeting poverty by curating opportunities and allocating training resources for low-wage workers, by extracting their transferable skills through conversational AI. This minimizes guesswork for workforce development programs and helps employers place talent in their hardest-to-fill roles.",
-        link: {
-            label: "Get a sneak peek →",
-        },
-        // logo: <LogoVinal />,
-        cardImg: <img src={CardSlate} alt="" />,
-        private: false,
-        personal: false,
-    },
+    // {
+    //     id: "slate",
+    //     height: 610,
+    //     title: "Slate",
+    //     description: "Targeting poverty by curating opportunities and allocating training resources for low-wage workers, by extracting their transferable skills through conversational AI. This minimizes guesswork for workforce development programs and helps employers place talent in their hardest-to-fill roles.",
+    //     link: {
+    //         label: "Get a sneak peek →",
+    //     },
+    //     // logo: <LogoVinal />,
+    //     cardImg: <img src={CardSlate} alt="" />,
+    //     private: false,
+    //     personal: false,
+    // },
     {
         id: "notre-dame-the-shirt-2020",
         height: 610,
