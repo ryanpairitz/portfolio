@@ -1,7 +1,7 @@
 import "./About.css";
 import AnimatedP from "../../AnimatedP";
 import AnimatedSection from "../../AnimatedSection";
-import Headshot from "../Header/ryanpairitz-headshot.jpg";
+import Headshot from "./ryanpairitz-headshot.jpeg";
 
 const Contents = [
     "I'm a product & experience designer bridging the gap between design and development. With a background in freelance graphic design and a bachelor's degree in Computer Science & Engineering from the University of Notre Dame, I bring a unique blend of creative and technical expertise to the table, making product handoffs especially seamless. This rare skillset also allows me to quickly ship a wide variety of high-quality projects I’ve both designed and developed — such as this portfolio.",
